@@ -1,0 +1,68 @@
+THEORY BalanceX IS
+block_services_i,14,3,0,11,0,0,0;
+Operation_cond_alarm,3,0,0,3,0,0,0;
+Operation_cond_mask,3,0,0,3,0,0,0;
+Operation_cond_occupy,2,0,0,2,0,0,0;
+Operation_cond_release,3,2,0,1,0,0,0;
+Operation_cond_unmask,3,1,0,2,0,0,0
+END
+&
+THEORY ProofState IS
+Proved(0);
+Proved(0);
+Proved(0);
+Proved(Util);
+Proved(Util);
+Proved(0);
+Proved(0);
+Proved(0);
+Proved(0);
+Proved(0);
+Proved(0);
+Proved(0);
+Proved(0);
+Proved(Util)
+END
+&
+THEORY MethodList IS
+pr;
+pr;
+pr;
+mp & pp(rt.1 | 5) & mp;
+mp & pp(rt.1 | 5) & mp & pp(rt.1 | 5) & mp & pp(rt.1 | 5) & mp & pp(rt.1 | 5);
+pr;
+pr;
+pr;
+pr;
+pr;
+pr;
+pr;
+pr;
+mp & pp(rt.1 | 5) & mp & pp(rt.1 | 5)
+END
+&
+THEORY PassList IS
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),(?; 0; 1; 2; 3);
+Force(0),(?; 0; 1; 2; 3);
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),(?; 0; 1; 2; 3)
+END
+&
+THEORY Status IS
+block_services_i,14,3,11,0,0,0;
+Operation_cond_alarm,3,0,3,0,0,0;
+Operation_cond_mask,3,0,3,0,0,0;
+Operation_cond_occupy,2,0,2,0,0,0;
+Operation_cond_release,3,2,1,0,0,0;
+Operation_cond_unmask,3,1,2,0,0,0
+END

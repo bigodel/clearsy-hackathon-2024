@@ -1,0 +1,58 @@
+THEORY ProofList IS
+_f(1) & _f(2) & _f(3) & _f(4) & _f(3) & _f(5) & Operation_cond_occupy.2,(_f(6) & _f(7) & _f(16) & _f(12) => _f(36));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(3) & _f(5) & Operation_cond_occupy.1,(_f(6) & _f(7) & _f(19) & _f(12) => _f(35));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(3) & _f(5) & Operation_cond_release.3,(_f(6) & _f(7) & _f(31) & _f(12) => _f(34));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(3) & _f(5) & Operation_cond_release.2,(_f(6) & _f(7) & _f(28) & _f(30) & _f(12) => _f(33));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(3) & _f(5) & Operation_cond_release.1,(_f(6) & _f(7) & _f(28) & _f(29) & _f(12) => _f(32));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(3) & _f(5) & Operation_cond_alarm.3,(_f(6) & _f(7) & _f(25) & _f(12) => _f(27));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(3) & _f(5) & Operation_cond_alarm.2,(_f(6) & _f(7) & _f(22) & _f(24) & _f(12) => _f(27));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(3) & _f(5) & Operation_cond_alarm.1,(_f(6) & _f(7) & _f(22) & _f(23) & _f(12) => _f(26));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(3) & _f(5) & Operation_cond_mask.3,(_f(6) & _f(7) & _f(19) & _f(12) => _f(21));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(3) & _f(5) & Operation_cond_mask.2,(_f(6) & _f(7) & _f(16) & _f(18) & _f(12) => _f(21));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(3) & _f(5) & Operation_cond_mask.1,(_f(6) & _f(7) & _f(16) & _f(17) & _f(12) => _f(20));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(3) & _f(5) & Operation_cond_unmask.3,(_f(6) & _f(7) & _f(11) & _f(12) => _f(15));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(3) & _f(5) & Operation_cond_unmask.2,(_f(6) & _f(7) & _f(8) & _f(10) & _f(12) => _f(14));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(3) & _f(5) & Operation_cond_unmask.1,(_f(6) & _f(7) & _f(8) & _f(9) & _f(12) => _f(13))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+t_block_i: FIN(INTEGER) & not(t_block_i = {}) & t_border_i: FIN(INTEGER) & not(t_border_i = {}) & t_exit_i: FIN(INTEGER) & not(t_exit_i = {}) & t_block : POW( t_block_i) & ((c_block_undet) : (t_block_i)) & not(((c_block_undet) : (t_block))) & t_border : POW( t_border_i) & ((c_border_undet) : (t_border_i)) & not(((c_border_undet) : (t_border))) & t_exit : POW( t_exit_i) & ((c_exit_undet) : (t_exit_i)) & not(((c_exit_undet) : (t_exit))) & ((cfg_b2b_up) : (((t_block) +-> (t_block)))) & ((cfg_b2b_down) : (((t_block) +-> (t_block)))) & ((cfg_b2bd_up) : (((t_block) +-> (t_border)))) & ((cfg_b2bd_down) : (((t_block) +-> (t_border)))) & ((cfg_b2ed_up) : (((t_block) +-> (t_exit)))) & ((cfg_b2ed_down) : (((t_block) +-> (t_exit)))) & ((bijection_t_block) : (((NAT) +-> (t_block_i)))) & bijection_t_block : seq(t_block ) & bijection_t_block : NATURAL-{0} +-> t_block & bijection_t_block : iseq(t_block) & not(bijection_t_block = {}) & bijection_t_block ~ : t_block +-> NATURAL-{0} & ran( bijection_t_block ) = t_block & ((bijection_t_block) : (perm(t_block))) & ((card(t_block)) = (size(bijection_t_block))) & (card(t_block) <= 2147483647);
+ob$1 : POW( t_block) & tdla$1 : POW( t_block) & mb$1 : POW( t_block);
+otd : POW( t_block) & obd : POW( t_border) & oed : POW( t_exit) & oed_prev : POW( t_exit) & cc_init : POW( t_block) & ((cc_tdl_ack) : (BOOL));
+((ob) = (ob$1)) & ((tdla) = (tdla$1)) & ((mb) = (mb$1));
+((p_block) : (t_block_i));
+((p_block) : (t_block));
+not(((p_block) : ((t_block - ob$1))));
+((p_block) : (((cfg_b2b_up)~ )[(((t_block - otd)) \/ ((t_block - ob$1)))]));
+not(((p_block) : (((cfg_b2b_up)~ )[(((t_block - otd)) \/ ((t_block - ob$1)))])));
+((p_block) : ((t_block - ob$1)));
+"Refinement is correct";
+((bool(((p_block) : (((cfg_b2b_down)~ )[(((t_block - otd)) \/ ((t_block - ob$1)))])))) = (bool(((p_block) : ((((t_block - ob$1)) \/ (((((cfg_b2b_up)~ )[(((t_block - otd)) \/ ((t_block - ob$1)))]) /\ (((cfg_b2b_down)~ )[(((t_block - otd)) \/ ((t_block - ob$1)))])))))))));
+((bool(((p_block) : (((cfg_b2b_up)~ )[(((t_block - otd)) \/ ((t_block - ob$1)))])))) = (bool(((p_block) : ((((t_block - ob$1)) \/ (((((cfg_b2b_up)~ )[(((t_block - otd)) \/ ((t_block - ob$1)))]) /\ (((cfg_b2b_down)~ )[(((t_block - otd)) \/ ((t_block - ob$1)))])))))))));
+((bool(((p_block) : ((t_block - ob$1))))) = (bool(((p_block) : ((((t_block - ob$1)) \/ (((((cfg_b2b_up)~ )[(((t_block - otd)) \/ ((t_block - ob$1)))]) /\ (((cfg_b2b_down)~ )[(((t_block - otd)) \/ ((t_block - ob$1)))])))))))));
+((p_block) : (((((cfg_b2bd_up) \/ (cfg_b2bd_down)))~ )[obd]));
+((p_block) : (tdla$1));
+not(((p_block) : (tdla$1)));
+not(((p_block) : (((((cfg_b2bd_up) \/ (cfg_b2bd_down)))~ )[obd])));
+not(((p_block) : ((((((cfg_b2bd_up) \/ (cfg_b2bd_down)))~ )[obd] - tdla$1))));
+((bool(((p_block) : (((((cfg_b2bd_up) \/ (cfg_b2bd_down)))~ )[obd])))) = (bool(((p_block) : ((((((cfg_b2bd_up) \/ (cfg_b2bd_down)))~ )[obd] - tdla$1))))));
+((p_block) : ((ob$1 - mb$1)));
+((p_block) : (otd));
+not(((p_block) : (otd)));
+not(((p_block) : ((ob$1 - mb$1))));
+not(((p_block) : (((ob$1 - mb$1) - otd))));
+((bool(((p_block) : ((ob$1 - mb$1))))) = (bool(((p_block) : (((ob$1 - mb$1) - otd))))));
+((p_block) : (((cc_init) \/ ((t_block - tdla$1)))));
+not(((p_block) : (((cfg_b2ed_up)~ )[(oed_prev - oed)])));
+((p_block) : (((cfg_b2ed_up)~ )[(oed_prev - oed)]));
+not(((p_block) : (((cc_init) \/ ((t_block - tdla$1))))));
+((bool(((p_block) : (((cfg_b2ed_down)~ )[(oed_prev - oed)])))) = (bool(((p_block) : (((((cc_init) \/ ((t_block - tdla$1)))) /\ (((((cfg_b2ed_up) \/ (cfg_b2ed_down)))~ )[(oed_prev - oed)])))))));
+((bool(((p_block) : (((cfg_b2ed_up)~ )[(oed_prev - oed)])))) = (bool(((p_block) : (((((cc_init) \/ ((t_block - tdla$1)))) /\ (((((cfg_b2ed_up) \/ (cfg_b2ed_down)))~ )[(oed_prev - oed)])))))));
+((bool(((p_block) : (((cc_init) \/ ((t_block - tdla$1))))))) = (bool(((p_block) : (((((cc_init) \/ ((t_block - tdla$1)))) /\ (((((cfg_b2ed_up) \/ (cfg_b2ed_down)))~ )[(oed_prev - oed)])))))));
+((bool(((p_block) : (otd)))) = (bool(((p_block) : (((((((cfg_b2bd_up) \/ (cfg_b2bd_down)))~ )[obd]) \/ (otd)))))));
+((bool(((p_block) : (((((cfg_b2bd_up) \/ (cfg_b2bd_down)))~ )[obd])))) = (bool(((p_block) : (((((((cfg_b2bd_up) \/ (cfg_b2bd_down)))~ )[obd]) \/ (otd)))))))
+END
+&
+THEORY EnumerateX
+END

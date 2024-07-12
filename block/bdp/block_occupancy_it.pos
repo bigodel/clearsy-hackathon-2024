@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Proof_Obligations xmlns="https://www.atelierb.eu/Formats/pog" version="1.0">
+    <Proof_Obligation>
+        <Tag>Initialisation</Tag>
+        <Simple_Goal status="Proved">
+            <Tag>Invariant is preserved</Tag>
+            <Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
+        </Simple_Goal>
+        <Simple_Goal status="Proved">
+            <Tag>Invariant is preserved</Tag>
+            <Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
+        </Simple_Goal>
+    </Proof_Obligation>
+    <Proof_Obligation>
+        <Tag>Operation_init_iteration_t_block</Tag>
+        <Simple_Goal status="Proved">
+            <Tag>Invariant is preserved</Tag>
+            <Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
+        </Simple_Goal>
+        <Simple_Goal status="Proved">
+            <Tag>Invariant is preserved</Tag>
+            <Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
+        </Simple_Goal>
+    </Proof_Obligation>
+    <Proof_Obligation>
+        <Tag>Operation_iterate_t_block</Tag>
+        <Simple_Goal status="Proved">
+            <Tag>Invariant is preserved</Tag>
+            <Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
+        </Simple_Goal>
+        <Simple_Goal status="Proved">
+            <Tag>Invariant is preserved</Tag>
+            <Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
+        </Simple_Goal>
+        <Simple_Goal status="Proved">
+            <Tag>Invariant is preserved</Tag>
+            <Proof_State proofState="Proved(Util)" methodList="dd(0) &amp; mp &amp; pp(rt.1 | 5)" passList="Force(0),(?; 0)"/>
+        </Simple_Goal>
+        <Simple_Goal status="Proved">
+            <Tag>Invariant is preserved</Tag>
+            <Proof_State proofState="Proved(Util)" methodList="dd(0) &amp; mp &amp; pp(rt.1 | 5)" passList="Force(0),(?; 0)"/>
+        </Simple_Goal>
+    </Proof_Obligation>
+</Proof_Obligations>

@@ -1,0 +1,13 @@
+THEORY ProofList IS
+_f(1) & _f(2) & WellDefinedness_nb_MP85.1,(_f(3) => _f(4))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+((First) : (NAT)) & ((Last) : (NAT)) & (First <= Last) & (Last +1 <= 2147483647) & ((Trains) = (((First) .. (Last)))) & is_MP85 : Trains +-> BOOL & dom(is_MP85) = Trains & ((is_MP85) : (((Trains) --> (BOOL))));
+"Operation is well defined";
+((((((is_MP85)~ )[({TRUE})]) /\ (Trains))) : (FIN(((((is_MP85)~ )[({TRUE})]) /\ (Trains)))))
+END
+&
+THEORY EnumerateX
+END

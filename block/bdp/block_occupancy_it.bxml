@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Machine xmlns='https://www.atelierb.eu/Formats/bxml' version='1.0' name='block_occupancy_it' type='abstraction' position='true' semantic='true' b0check='false'>
+<Sees>
+<Attr>
+<Pos l='4' c='1' s='4'/>
+</Attr>
+<Referenced_Machine>
+<Attr>
+<Pos l='5' c='10' s='13'/>
+</Attr>
+<Name>configuration</Name>
+</Referenced_Machine>
+</Sees>
+<Abstract_Variables>
+<Attr>
+<Pos l='7' c='1' s='18'/>
+</Attr>
+<Id value='block_to_treat' typref='4'>
+<Attr>
+<Pos l='8' c='10' s='14'/>
+</Attr>
+</Id>
+<Id value='treated_block' typref='4'>
+<Attr>
+<Pos l='9' c='10' s='13'/>
+</Attr>
+</Id>
+</Abstract_Variables>
+<Invariant>
+<Attr>
+<Pos l='11' c='1' s='9'/>
+</Attr>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='&lt;:'>
+<Attr>
+<Pos l='12' c='25' s='2'/>
+</Attr>
+<Id value='block_to_treat' typref='4'>
+<Attr>
+<Pos l='12' c='10' s='14'/>
+</Attr>
+</Id>
+<Id value='t_block' typref='4'>
+<Attr>
+<Pos l='12' c='28' s='7'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='&lt;:'>
+<Attr>
+<Pos l='13' c='24' s='2'/>
+</Attr>
+<Id value='treated_block' typref='4'>
+<Attr>
+<Pos l='13' c='10' s='13'/>
+</Attr>
+</Id>
+<Id value='t_block' typref='4'>
+<Attr>
+<Pos l='13' c='27' s='7'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='14' c='42' s='1'/>
+</Attr>
+<Binary_Exp op='/\' typref='4'>
+<Attr>
+<Pos l='14' c='25' s='2'/>
+</Attr>
+<Id value='block_to_treat' typref='4'>
+<Attr>
+<Pos l='14' c='10' s='14'/>
+</Attr>
+</Id>
+<Id value='treated_block' typref='4'>
+<Attr>
+<Pos l='14' c='28' s='13'/>
+</Attr>
+</Id>
+</Binary_Exp>
+<EmptySet typref='4'>
+<Attr>
+<Pos l='14' c='44' s='2'/>
+</Attr>
+</EmptySet>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='15' c='42' s='1'/>
+</Attr>
+<Binary_Exp op='\/' typref='4'>
+<Attr>
+<Pos l='15' c='25' s='2'/>
+</Attr>
+<Id value='block_to_treat' typref='4'>
+<Attr>
+<Pos l='15' c='10' s='14'/>
+</Attr>
+</Id>
+<Id value='treated_block' typref='4'>
+<Attr>
+<Pos l='15' c='28' s='13'/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Id value='t_block' typref='4'>
+<Attr>
+<Pos l='15' c='44' s='7'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Invariant>
+<Initialisation>
+<Attr>
+<Pos l='17' c='1' s='14'/>
+</Attr>
+<Nary_Sub op='||'>
+<Assignement_Sub>
+<Attr>
+<Pos l='18' c='25' s='2'/>
+</Attr>
+<Variables>
+<Id value='block_to_treat' typref='4'>
+<Attr>
+<Pos l='18' c='10' s='14'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='t_block' typref='4'>
+<Attr>
+<Pos l='18' c='28' s='7'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='19' c='24' s='2'/>
+</Attr>
+<Variables>
+<Id value='treated_block' typref='4'>
+<Attr>
+<Pos l='19' c='10' s='13'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet typref='4'>
+<Attr>
+<Pos l='19' c='27' s='2'/>
+</Attr>
+</EmptySet>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Initialisation>
+<Operations>
+<Operation name='init_iteration_t_block'>
+<Attr>
+<Pos l='23' c='10' s='4' endLine='28'/>
+</Attr>
+<Output_Parameters>
+<Id value='cond' typref='0'>
+<Attr>
+<Pos l='23' c='10' s='4'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Body>
+<Nary_Sub op='||'>
+<Assignement_Sub>
+<Attr>
+<Pos l='25' c='34' s='2'/>
+</Attr>
+<Variables>
+<Id value='block_to_treat' typref='4'>
+<Attr>
+<Pos l='25' c='19' s='14'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='t_block' typref='4'>
+<Attr>
+<Pos l='25' c='37' s='7'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='26' c='33' s='2'/>
+</Attr>
+<Variables>
+<Id value='treated_block' typref='4'>
+<Attr>
+<Pos l='26' c='19' s='13'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet typref='4'>
+<Attr>
+<Pos l='26' c='36' s='2'/>
+</Attr>
+</EmptySet>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='27' c='24' s='2'/>
+</Attr>
+<Variables>
+<Id value='cond' typref='0'>
+<Attr>
+<Pos l='27' c='19' s='4'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Boolean_Exp typref='0'>
+<Attr>
+<Pos l='27' c='27' s='4'/>
+</Attr>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='27' c='40' s='2'/>
+</Attr>
+<Id value='t_block' typref='4'>
+<Attr>
+<Pos l='27' c='32' s='7'/>
+</Attr>
+</Id>
+<EmptySet typref='4'>
+<Attr>
+<Pos l='27' c='43' s='2'/>
+</Attr>
+</EmptySet>
+</Exp_Comparison>
+</Boolean_Exp>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Body>
+</Operation>
+<Operation name='iterate_t_block'>
+<Attr>
+<Pos l='30' c='10' s='4' endLine='46'/>
+</Attr>
+<Output_Parameters>
+<Id value='cond' typref='0'>
+<Attr>
+<Pos l='30' c='10' s='4'/>
+</Attr>
+</Id>
+<Id value='bl' typref='5'>
+<Attr>
+<Pos l='30' c='16' s='2'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Precondition>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='32' c='34' s='2'/>
+</Attr>
+<Id value='block_to_treat' typref='4'>
+<Attr>
+<Pos l='32' c='19' s='14'/>
+</Attr>
+</Id>
+<EmptySet typref='4'>
+<Attr>
+<Pos l='32' c='37' s='2'/>
+</Attr>
+</EmptySet>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<ANY_Sub>
+<Attr>
+<Pos l='34' c='19' s='3'/>
+</Attr>
+<Variables>
+<Id value='n_bl' typref='5'>
+<Attr>
+<Pos l='35' c='33' s='4'/>
+</Attr>
+</Id>
+</Variables>
+<Pred>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='37' c='38' s='1'/>
+</Attr>
+<Id value='n_bl' typref='5'>
+<Attr>
+<Pos l='37' c='33' s='4'/>
+</Attr>
+</Id>
+<Id value='t_block_i' typref='4'>
+<Attr>
+<Pos l='37' c='40' s='9'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='38' c='38' s='1'/>
+</Attr>
+<Id value='n_bl' typref='5'>
+<Attr>
+<Pos l='38' c='33' s='4'/>
+</Attr>
+</Id>
+<Id value='t_block' typref='4'>
+<Attr>
+<Pos l='38' c='40' s='7'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='39' c='38' s='1'/>
+</Attr>
+<Id value='n_bl' typref='5'>
+<Attr>
+<Pos l='39' c='33' s='4'/>
+</Attr>
+</Id>
+<Id value='block_to_treat' typref='4'>
+<Attr>
+<Pos l='39' c='40' s='14'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Pred>
+<Then>
+<Nary_Sub op='||'>
+<Assignement_Sub>
+<Attr>
+<Pos l='41' c='36' s='2'/>
+</Attr>
+<Variables>
+<Id value='bl' typref='5'>
+<Attr>
+<Pos l='41' c='33' s='2'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='n_bl' typref='5'>
+<Attr>
+<Pos l='41' c='39' s='4'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='42' c='48' s='2'/>
+</Attr>
+<Variables>
+<Id value='block_to_treat' typref='4'>
+<Attr>
+<Pos l='42' c='33' s='14'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='-s' typref='4'>
+<Attr>
+<Pos l='42' c='66' s='1'/>
+</Attr>
+<Id value='block_to_treat' typref='4'>
+<Attr>
+<Pos l='42' c='51' s='14'/>
+</Attr>
+</Id>
+<Nary_Exp op='{' typref='4'>
+<Attr>
+<Pos l='42' c='68' s='1'/>
+</Attr>
+<Id value='n_bl' typref='5'>
+<Attr>
+<Pos l='42' c='69' s='4'/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='43' c='47' s='2'/>
+</Attr>
+<Variables>
+<Id value='treated_block' typref='4'>
+<Attr>
+<Pos l='43' c='33' s='13'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='\/' typref='4'>
+<Attr>
+<Pos l='43' c='64' s='2'/>
+</Attr>
+<Id value='treated_block' typref='4'>
+<Attr>
+<Pos l='43' c='50' s='13'/>
+</Attr>
+</Id>
+<Nary_Exp op='{' typref='4'>
+<Attr>
+<Pos l='43' c='67' s='1'/>
+</Attr>
+<Id value='n_bl' typref='5'>
+<Attr>
+<Pos l='43' c='68' s='4'/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='44' c='38' s='2'/>
+</Attr>
+<Variables>
+<Id value='cond' typref='0'>
+<Attr>
+<Pos l='44' c='33' s='4'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Boolean_Exp typref='0'>
+<Attr>
+<Pos l='44' c='41' s='4'/>
+</Attr>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='44' c='61' s='2'/>
+</Attr>
+<Id value='block_to_treat' typref='4'>
+<Attr>
+<Pos l='44' c='46' s='14'/>
+</Attr>
+</Id>
+<Nary_Exp op='{' typref='4'>
+<Attr>
+<Pos l='44' c='64' s='1'/>
+</Attr>
+<Id value='n_bl' typref='5'>
+<Attr>
+<Pos l='44' c='65' s='4'/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Exp_Comparison>
+</Boolean_Exp>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Then>
+</ANY_Sub>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos>
+<Type id='0'>
+<Id value='BOOL'/>
+</Type>
+<Type id='1'>
+<Id value='INTEGER'/>
+</Type>
+<Type id='2'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Type>
+<Type id='3'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='4'>
+<Unary_Exp op='POW'>
+<Id value='t_block_i'/>
+</Unary_Exp>
+</Type>
+<Type id='5'>
+<Id value='t_block_i'/>
+</Type>
+</TypeInfos>
+
+</Machine>

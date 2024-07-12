@@ -1,0 +1,30 @@
+THEORY ProofList IS
+_f(1) & _f(2) & _f(6) & _f(7) & Operation_iterate_t_block.4,(_f(8) & _f(9) & _f(10) & _f(3) => _f(14));
+_f(1) & _f(2) & _f(6) & _f(7) & Operation_iterate_t_block.3,(_f(8) & _f(9) & _f(10) & _f(3) => _f(13));
+_f(1) & _f(2) & _f(6) & _f(7) & Operation_iterate_t_block.2,(_f(8) & _f(9) & _f(10) & _f(3) => _f(12));
+_f(1) & _f(2) & _f(6) & _f(7) & Operation_iterate_t_block.1,(_f(8) & _f(9) & _f(10) & _f(3) => _f(11));
+_f(1) & _f(2) & _f(6) & Operation_init_iteration_t_block.2,(_f(3) => _f(5));
+_f(1) & _f(2) & _f(6) & Operation_init_iteration_t_block.1,(_f(3) => _f(4));
+_f(1) & _f(2) & Initialisation.2,(_f(3) => _f(5));
+_f(1) & _f(2) & Initialisation.1,(_f(3) => _f(4))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+t_block_i: FIN(INTEGER) & not(t_block_i = {}) & t_border_i: FIN(INTEGER) & not(t_border_i = {}) & t_exit_i: FIN(INTEGER) & not(t_exit_i = {}) & t_block : POW( t_block_i) & ((c_block_undet) : (t_block_i)) & not(((c_block_undet) : (t_block))) & t_border : POW( t_border_i) & ((c_border_undet) : (t_border_i)) & not(((c_border_undet) : (t_border))) & t_exit : POW( t_exit_i) & ((c_exit_undet) : (t_exit_i)) & not(((c_exit_undet) : (t_exit))) & ((cfg_b2b_up) : (((t_block) +-> (t_block)))) & ((cfg_b2b_down) : (((t_block) +-> (t_block)))) & ((cfg_b2bd_up) : (((t_block) +-> (t_border)))) & ((cfg_b2bd_down) : (((t_block) +-> (t_border)))) & ((cfg_b2ed_up) : (((t_block) +-> (t_exit)))) & ((cfg_b2ed_down) : (((t_block) +-> (t_exit)))) & ((bijection_t_block) : (((NAT) +-> (t_block_i)))) & bijection_t_block : seq(t_block ) & bijection_t_block : NATURAL-{0} +-> t_block & bijection_t_block : iseq(t_block) & not(bijection_t_block = {}) & bijection_t_block ~ : t_block +-> NATURAL-{0} & ran( bijection_t_block ) = t_block & ((bijection_t_block) : (perm(t_block))) & ((card(t_block)) = (size(bijection_t_block))) & (card(t_block) <= 2147483647);
+"Invariant is preserved";
+((((t_block) /\ ({}))) = ({}));
+((((t_block) \/ ({}))) = (t_block));
+block_to_treat : POW( t_block) & treated_block : POW( t_block) & ((((block_to_treat) /\ (treated_block))) = ({})) & ((((block_to_treat) \/ (treated_block))) = (t_block));
+not(((block_to_treat) = ({})));
+((n_bl) : (t_block_i));
+((n_bl) : (t_block));
+((n_bl) : (block_to_treat));
+(block_to_treat - ({n_bl})) : POW( t_block);
+((treated_block) \/ (({n_bl}))) : POW( t_block);
+(((((block_to_treat - ({n_bl}))) /\ (((treated_block) \/ (({n_bl})))))) = ({}));
+(((((block_to_treat - ({n_bl}))) \/ (((treated_block) \/ (({n_bl})))))) = (t_block))
+END
+&
+THEORY EnumerateX
+END

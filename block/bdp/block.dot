@@ -1,0 +1,22 @@
+digraph {
+block_miniservices [ label=" block_miniservices " shape= box ]
+block_miniservices_i [ label=" block_miniservices_i " shape= boxshape= rhombcolor= pink ]
+block_occupancy [ label=" block_occupancy " shape= boxshape= rhombcolor= pink ]
+block_occupancy_i [ label=" block_occupancy_i " shape= boxshape= rhombcolor= pink ]
+block_occupancy_it [ label=" block_occupancy_it " shape= box ]
+block_occupancy_it_i [ label=" block_occupancy_it_i " shape= boxshape= rhombcolor= pink ]
+block_occupancy_seq [ label=" block_occupancy_seq " shape= boxshape= rhombcolor= pink ]
+block_occupancy_seq_i [ label=" block_occupancy_seq_i " shape= boxshape= rhombcolor= pink ]
+block_services_i [ label=" block_services\nblock_services_i " shape= box ]
+configuration [ label=" configuration " shape= boxshape= rhombcolor= pink ]
+inputs [ label=" inputs " shape= boxshape= rhombcolor= pink ]
+main [ label=" main " shape= boxshape= rhombcolor= pink ]
+main_i [ label=" main_i " shape= boxshape= rhombcolor= pink ]
+
+"block_miniservices" -> "configuration" [style= dotted ]
+"block_miniservices" -> "inputs" [style= dotted ]
+"block_occupancy_it" -> "configuration" [style= dotted ]
+"block_services_i" -> "configuration" [style= dotted ]
+"block_services_i" -> "inputs" [style= dotted ]
+"block_services_i" -> "block_miniservices" []
+}

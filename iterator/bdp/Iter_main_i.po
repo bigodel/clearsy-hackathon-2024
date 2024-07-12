@@ -1,0 +1,76 @@
+THEORY ProofList IS
+_f(1) & _f(2) & _f(3) & WellDefinedness_all_MP85.1,(_f(4) & _f(5) & _f(30) & _f(39) => _f(41));
+_f(1) & _f(2) & _f(3) & WellDefinedness_nb_MP85.2,(_f(4) & _f(5) & _f(6) & _f(39) => _f(41));
+_f(1) & _f(2) & _f(3) & WellDefinedness_nb_MP85.1,(_f(4) & _f(5) & _f(39) => _f(40));
+_f(1) & _f(2) & _f(3) & Operation_all_MP85.12,(_f(4) & _f(5) & _f(30) & _f(34) & _f(28) => _f(38));
+_f(1) & _f(2) & _f(3) & Operation_all_MP85.11,(_f(4) & _f(5) & _f(30) & _f(7) & _f(31) & _f(8) & _f(9) & _f(10) & _f(11) & _f(12) & _f(33) & _f(26) => _f(27));
+_f(1) & _f(2) & _f(3) & Operation_all_MP85.10,(_f(4) & _f(5) & _f(30) & _f(7) & _f(31) & _f(8) & _f(9) & _f(10) & _f(11) & _f(12) & _f(32) & _f(26) => _f(27));
+_f(1) & _f(2) & _f(3) & Operation_all_MP85.9,(_f(4) & _f(5) & _f(30) & _f(24) => _f(25));
+_f(1) & _f(2) & _f(3) & Operation_all_MP85.8,(_f(4) & _f(5) & _f(30) & _f(7) & _f(31) & _f(8) & _f(9) & _f(10) & _f(11) & _f(12) & _f(33) & _f(20) => _f(37));
+_f(1) & _f(2) & _f(3) & Operation_all_MP85.7,(_f(4) & _f(5) & _f(30) & _f(7) & _f(31) & _f(8) & _f(9) & _f(10) & _f(11) & _f(12) & _f(33) & _f(20) => _f(21));
+_f(1) & _f(2) & _f(3) & Operation_all_MP85.6,(_f(4) & _f(5) & _f(30) & _f(7) & _f(31) & _f(8) & _f(9) & _f(10) & _f(11) & _f(12) & _f(32) & _f(20) => _f(36));
+_f(1) & _f(2) & _f(3) & Operation_all_MP85.5,(_f(4) & _f(5) & _f(30) & _f(7) & _f(31) & _f(8) & _f(9) & _f(10) & _f(11) & _f(12) & _f(32) & _f(20) => _f(21));
+_f(1) & _f(2) & _f(3) & Operation_all_MP85.4,(_f(4) & _f(5) & _f(30) & _f(7) & _f(31) & _f(8) & _f(9) & _f(10) & _f(11) & _f(19) => _f(12));
+_f(1) & _f(2) & _f(3) & Operation_all_MP85.3,(_f(4) & _f(5) & _f(30) & _f(7) & _f(31) & _f(19) => _f(8));
+_f(1) & _f(2) & _f(3) & Operation_all_MP85.2,(_f(16) => _f(35));
+_f(1) & _f(2) & _f(3) & Operation_all_MP85.1,(_f(16) => _f(17));
+_f(1) & _f(2) & _f(3) & Operation_nb_MP85.12,(_f(4) & _f(5) & _f(6) & _f(15) & _f(28) => _f(29));
+_f(1) & _f(2) & _f(3) & Operation_nb_MP85.11,(_f(4) & _f(5) & _f(6) & _f(7) & _f(8) & _f(9) & _f(10) & _f(11) & _f(12) & _f(14) & _f(26) => _f(27));
+_f(1) & _f(2) & _f(3) & Operation_nb_MP85.10,(_f(4) & _f(5) & _f(6) & _f(7) & _f(8) & _f(9) & _f(10) & _f(11) & _f(12) & _f(13) & _f(26) => _f(27));
+_f(1) & _f(2) & _f(3) & Operation_nb_MP85.9,(_f(4) & _f(5) & _f(6) & _f(24) => _f(25));
+_f(1) & _f(2) & _f(3) & Operation_nb_MP85.8,(_f(4) & _f(5) & _f(6) & _f(7) & _f(8) & _f(9) & _f(10) & _f(11) & _f(12) & _f(14) & _f(20) => _f(23));
+_f(1) & _f(2) & _f(3) & Operation_nb_MP85.7,(_f(4) & _f(5) & _f(6) & _f(7) & _f(8) & _f(9) & _f(10) & _f(11) & _f(12) & _f(14) & _f(20) => _f(21));
+_f(1) & _f(2) & _f(3) & Operation_nb_MP85.6,(_f(4) & _f(5) & _f(6) & _f(7) & _f(8) & _f(9) & _f(10) & _f(11) & _f(12) & _f(13) & _f(20) => _f(22));
+_f(1) & _f(2) & _f(3) & Operation_nb_MP85.5,(_f(4) & _f(5) & _f(6) & _f(7) & _f(8) & _f(9) & _f(10) & _f(11) & _f(12) & _f(13) & _f(20) => _f(21));
+_f(1) & _f(2) & _f(3) & Operation_nb_MP85.4,(_f(4) & _f(5) & _f(6) & _f(7) & _f(8) & _f(9) & _f(10) & _f(11) & _f(19) => _f(12));
+_f(1) & _f(2) & _f(3) & Operation_nb_MP85.3,(_f(4) & _f(5) & _f(6) & _f(7) & _f(19) => _f(8));
+_f(1) & _f(2) & _f(3) & Operation_nb_MP85.2,(_f(16) => _f(18));
+_f(1) & _f(2) & _f(3) & Operation_nb_MP85.1,(_f(16) => _f(17))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+((First) : (NAT)) & ((Last) : (NAT)) & (First <= Last) & (Last +1 <= 2147483647) & ((Trains) = (((First) .. (Last)))) & is_MP85 : Trains +-> BOOL & dom(is_MP85) = Trains & ((is_MP85) : (((Trains) --> (BOOL))));
+Todo$1 : POW( Trains) & Done$1 : POW( Trains) & ((((Todo$1) \/ (Done$1))) = (Trains)) & ((((Todo$1) /\ (Done$1))) = ({}));
+((((Todo) \/ (Done))) = (Trains));
+((continue) = (bool(not(((Todo) = ({}))))));
+((res) = (card(((((is_MP85)~ )[({TRUE})]) /\ (Done)))));
+((continue) = (TRUE));
+not(((Todo) = ({})));
+((chosen) : (NAT));
+((chosen) : (Todo));
+((new_Todo) = ((Todo - ({chosen}))));
+((chosen) : (Trains));
+(((is_MP85 )(chosen)) = (TRUE));
+not((((is_MP85 )(chosen)) = (TRUE)));
+not(((continue) = (TRUE)));
+"Loop initialisation";
+((((Trains) \/ ({}))) = (Trains));
+((0) = (card(((((is_MP85)~ )[({TRUE})]) /\ ({})))));
+"Precondition predicate";
+"Loop invariant is preserved";
+((((new_Todo) \/ (((Done) \/ (({chosen})))))) = (Trains));
+(((res + 1)) = (card(((((is_MP85)~ )[({TRUE})]) /\ (((Done) \/ (({chosen}))))))));
+((res) = (card(((((is_MP85)~ )[({TRUE})]) /\ (((Done) \/ (({chosen}))))))));
+"Loop variant is positive";
+(0 <= card(Todo));
+"Variant is decreasing";
+(card(new_Todo) +1 <= card(Todo));
+"End of loop";
+((res) = (card(((((is_MP85)~ )[({TRUE})]) /\ (Trains)))));
+((res) = (bool(((((((Done) <| (is_MP85)))~ )[({TRUE})]) = (Done)))));
+((res) = (TRUE));
+(((is_MP85 )(chosen)) = (FALSE));
+not((((is_MP85 )(chosen)) = (FALSE)));
+not(((continue) = (TRUE)) & ((res) = (TRUE)));
+(((((({}) <| (is_MP85)))~ )[({TRUE})]) = ({}));
+not(((((((((Done) \/ (({chosen})))) <| (is_MP85)))~ )[({TRUE})]) = (((Done) \/ (({chosen}))))));
+((res) = (bool(((((((((Done) \/ (({chosen})))) <| (is_MP85)))~ )[({TRUE})]) = (((Done) \/ (({chosen}))))))));
+((res) = (bool(((((is_MP85)~ )[({TRUE})]) = (Trains)))));
+"Operation is well defined";
+((((((is_MP85)~ )[({TRUE})]) /\ (Done))) : (FIN(((((is_MP85)~ )[({TRUE})]) /\ (Done)))));
+((Todo) : (FIN(Todo)))
+END
+&
+THEORY EnumerateX
+END

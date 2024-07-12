@@ -1,0 +1,62 @@
+THEORY ProofList IS
+_f(1) & _f(24) & _f(29) & _f(30) & WellDefinedness_read_all_cfg_b2ed_down.1,(_f(41) & _f(27) => _f(42));
+_f(1) & _f(24) & _f(29) & _f(30) & WellDefinedness_read_all_cfg_b2ed_up.1,(_f(39) & _f(27) => _f(40));
+_f(1) & _f(24) & _f(29) & _f(30) & WellDefinedness_read_all_cfg_b2bd_down.1,(_f(37) & _f(27) => _f(38));
+_f(1) & _f(24) & _f(29) & _f(30) & WellDefinedness_read_all_cfg_b2bd_up.1,(_f(35) & _f(27) => _f(36));
+_f(1) & _f(24) & _f(29) & _f(30) & WellDefinedness_read_all_cfg_b2b_down.1,(_f(33) & _f(27) => _f(34));
+_f(1) & _f(24) & _f(29) & _f(30) & WellDefinedness_read_all_cfg_b2b_up.1,(_f(31) & _f(27) => _f(32));
+_f(1) & _f(24) & WellDefinedness_read_card_t_block.1,(_f(27) => _f(22));
+_f(1) & _f(24) & _f(25) & _f(26) & WellDefinedness_read_bijection_t_block.1,(_f(27) => _f(28));
+_f(1) & _f(2) & WellDefinednessProperties.4,(_f(3) & _f(4) & _f(5) & _f(6) & _f(7) & _f(8) & _f(9) & _f(10) & _f(11) & _f(12) & _f(13) & _f(14) & _f(15) & _f(16) & _f(17) & _f(18) & _f(19) & _f(20) & _f(21) => _f(22));
+_f(1) & _f(2) & WellDefinednessProperties.3,(_f(3) & _f(4) & _f(5) & _f(6) & _f(7) & _f(8) & _f(9) & _f(10) & _f(11) & _f(12) & _f(13) & _f(14) & _f(15) & _f(16) & _f(17) & _f(18) & _f(19) & _f(21) => _f(23));
+_f(1) & _f(2) & WellDefinednessProperties.2,(_f(3) & _f(4) & _f(5) & _f(6) & _f(7) & _f(8) & _f(9) & _f(10) & _f(11) & _f(12) & _f(13) & _f(14) & _f(15) & _f(16) & _f(17) & _f(18) & _f(19) & _f(21) => _f(22));
+_f(1) & _f(2) & WellDefinednessProperties.1,(_f(3) & _f(4) & _f(5) & _f(6) & _f(7) & _f(8) & _f(9) & _f(10) & _f(11) & _f(12) & _f(13) & _f(14) & _f(15) & _f(16) & _f(17) & _f(18) & _f(21) => _f(22))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+t_block_i: FIN(INTEGER) & not(t_block_i = {}) & t_border_i: FIN(INTEGER) & not(t_border_i = {}) & t_exit_i: FIN(INTEGER) & not(t_exit_i = {});
+t_block : POW( t_block_i);
+((c_block_undet) : (t_block_i));
+not(((c_block_undet) : (t_block)));
+t_border : POW( t_border_i);
+((c_border_undet) : (t_border_i));
+not(((c_border_undet) : (t_border)));
+t_exit : POW( t_exit_i);
+((c_exit_undet) : (t_exit_i));
+not(((c_exit_undet) : (t_exit)));
+((cfg_b2b_up) : (((t_block) +-> (t_block))));
+((cfg_b2b_down) : (((t_block) +-> (t_block))));
+((cfg_b2bd_up) : (((t_block) +-> (t_border))));
+((cfg_b2bd_down) : (((t_block) +-> (t_border))));
+((cfg_b2ed_up) : (((t_block) +-> (t_exit))));
+((cfg_b2ed_down) : (((t_block) +-> (t_exit))));
+((bijection_t_block) : (((NAT) +-> (t_block_i))));
+bijection_t_block : seq(t_block ) & bijection_t_block : NATURAL-{0} +-> t_block & bijection_t_block : iseq(t_block) & not(bijection_t_block = {}) & bijection_t_block ~ : t_block +-> NATURAL-{0} & ran( bijection_t_block ) = t_block & ((bijection_t_block) : (perm(t_block)));
+((card(t_block)) = (size(bijection_t_block)));
+"Properties are well defined";
+((t_block) : (FIN(t_block)));
+((bijection_t_block) : (seq(ran(bijection_t_block))));
+t_block_i: FIN(INTEGER) & not(t_block_i = {}) & t_border_i: FIN(INTEGER) & not(t_border_i = {}) & t_exit_i: FIN(INTEGER) & not(t_exit_i = {}) & t_block : POW( t_block_i) & ((c_block_undet) : (t_block_i)) & not(((c_block_undet) : (t_block))) & t_border : POW( t_border_i) & ((c_border_undet) : (t_border_i)) & not(((c_border_undet) : (t_border))) & t_exit : POW( t_exit_i) & ((c_exit_undet) : (t_exit_i)) & not(((c_exit_undet) : (t_exit))) & ((cfg_b2b_up) : (((t_block) +-> (t_block)))) & ((cfg_b2b_down) : (((t_block) +-> (t_block)))) & ((cfg_b2bd_up) : (((t_block) +-> (t_border)))) & ((cfg_b2bd_down) : (((t_block) +-> (t_border)))) & ((cfg_b2ed_up) : (((t_block) +-> (t_exit)))) & ((cfg_b2ed_down) : (((t_block) +-> (t_exit)))) & ((bijection_t_block) : (((NAT) +-> (t_block_i)))) & bijection_t_block : seq(t_block ) & bijection_t_block : NATURAL-{0} +-> t_block & bijection_t_block : iseq(t_block) & not(bijection_t_block = {}) & bijection_t_block ~ : t_block +-> NATURAL-{0} & ran( bijection_t_block ) = t_block & ((bijection_t_block) : (perm(t_block))) & ((card(t_block)) = (size(bijection_t_block))) & (card(t_block) <= 2147483647);
+((rg) : (NAT));
+((rg) : (dom(bijection_t_block)));
+"Operation is well defined";
+((bijection_t_block) : (((dom(bijection_t_block)) +-> (ran(bijection_t_block)))));
+((p_block) : (t_block_i));
+((p_block) : (t_block));
+((p_block) : (dom(cfg_b2b_up)));
+((cfg_b2b_up) : (((dom(cfg_b2b_up)) +-> (ran(cfg_b2b_up)))));
+((p_block) : (dom(cfg_b2b_down)));
+((cfg_b2b_down) : (((dom(cfg_b2b_down)) +-> (ran(cfg_b2b_down)))));
+((p_block) : (dom(cfg_b2bd_up)));
+((cfg_b2bd_up) : (((dom(cfg_b2bd_up)) +-> (ran(cfg_b2bd_up)))));
+((p_block) : (dom(cfg_b2bd_down)));
+((cfg_b2bd_down) : (((dom(cfg_b2bd_down)) +-> (ran(cfg_b2bd_down)))));
+((p_block) : (dom(cfg_b2ed_up)));
+((cfg_b2ed_up) : (((dom(cfg_b2ed_up)) +-> (ran(cfg_b2ed_up)))));
+((p_block) : (dom(cfg_b2ed_down)));
+((cfg_b2ed_down) : (((dom(cfg_b2ed_down)) +-> (ran(cfg_b2ed_down)))))
+END
+&
+THEORY EnumerateX
+END

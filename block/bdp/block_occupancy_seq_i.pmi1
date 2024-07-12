@@ -1,0 +1,36 @@
+THEORY BalanceX IS
+block_occupancy_seq_i,6,2,0,4,0,0,0;
+Operation_set_block_occupancy,6,2,0,4,0,0,0
+END
+&
+THEORY ProofState IS
+Proved(0);
+Proved(0);
+Proved(Util);
+Proved(0);
+Proved(0);
+Proved(Util)
+END
+&
+THEORY MethodList IS
+pr;
+pr;
+mp & pp(rt.1 | 5) & mp;
+pr;
+pr;
+mp & pp(rt.1 | 5) & mp
+END
+&
+THEORY PassList IS
+Force(0),?;
+Force(0),?;
+Force(0),(?; 0; 1; 2; 3);
+Force(0),?;
+Force(0),?;
+Force(0),(?; 0; 1; 2; 3)
+END
+&
+THEORY Status IS
+block_occupancy_seq_i,6,2,4,0,0,0;
+Operation_set_block_occupancy,6,2,4,0,0,0
+END

@@ -1,0 +1,189 @@
+﻿IMPLEMENTATION
+        block_miniservices_i
+
+REFINES
+        block_miniservices
+
+SEES
+        configuration , inputs
+
+CONCRETE_VARIABLES
+        tab_ob , tab_mb , tab_tdla
+
+INVARIANT
+        tab_ob : t_block_i --> BOOL &
+        tab_mb : t_block_i --> BOOL &
+        tab_tdla : t_block_i --> BOOL &
+        ob = ( tab_ob ~ [ { TRUE } ] /\ t_block ) &
+  tdla = ( tab_tdla ~ [ { TRUE } ] /\ t_block ) &
+        mb = ( tab_mb ~ [ { TRUE } ] /\ t_block )
+
+INITIALISATION
+        tab_ob := t_block_i * { TRUE } ; /* Every block starts as occupied */
+        tab_tdla := t_block_i * { TRUE } ; /* Every block starts as alarming */
+        tab_mb := t_block_i * { FALSE } /* Every block starts as unmasked */
+
+OPERATIONS
+
+        p_res <-- read_mb ( p_block ) = p_res := tab_mb ( p_block ) ; /* COMPLETE */
+
+        unmask_block ( p_block ) = tab_mb ( p_block ) := FALSE ; /* COMPLETE */
+
+        mask_block ( p_block ) = tab_mb ( p_block ) := TRUE ; /* COMPLETE */
+
+        p_res <-- read_tdla ( p_block ) = p_res := tab_tdla ( p_block ) ; /* COMPLETE */
+
+        alarm_block ( p_block ) = tab_tdla ( p_block ) := TRUE ; /* COMPLETE */
+
+        unalarm_block ( p_block ) = tab_tdla ( p_block ) := FALSE ; /* COMPLETE */
+
+        clear_tdla = tab_tdla := t_block_i * { FALSE } ; /* COMPLETE */
+
+        p_res <-- read_ob ( p_block ) = p_res := tab_ob ( p_block ) ; /* COMPLETE */
+
+        occ_block ( p_block ) = tab_ob ( p_block ) := TRUE ; /* COMPLETE */
+
+        unocc_block ( p_block ) = tab_ob ( p_block ) := FALSE ; /* COMPLETE */
+
+        p_res <-- is_free_block ( p_block ) =
+        VAR is_occupied IN
+                  // We're always initializing the value of p_res to FALSE in these queries
+    // because, according to the specification, it should *only* be TRUE if
+    // the conditions are satisfied
+          p_res := FALSE ;
+          is_occupied := tab_ob ( p_block ) ;
+
+          // tab_ob(p_block) = FALSE means p_block is *not* occupied
+    IF is_occupied = FALSE THEN
+            p_res := TRUE
+          END
+        END ; /* COMPLETE */
+
+        p_res <-- has_up_free_or_freetd ( p_block ) =
+        VAR has_up_block , up_block IN
+    p_res := FALSE ;
+    has_up_block , up_block <-- read_all_cfg_b2b_up ( p_block ) ;
+
+    // First we need to check whether there is any block upwards
+    IF has_up_block = TRUE THEN
+      VAR is_up_free , is_up_td_occupied IN
+        is_up_free := tab_ob ( up_block ) ;
+        is_up_td_occupied <-- read_otd ( up_block ) ;
+
+        // If there is a block upwards, we check whether that upward block is
+        // free or whether its trackside detector is *not* occupied (i.e. free)
+        IF is_up_free = TRUE or is_up_td_occupied = FALSE THEN
+          p_res := TRUE
+
+        END
+      END
+    END
+        END ; /* COMPLETE */
+
+        // Same explanation as the operation above, but on the downward direction
+        p_res <-- has_down_free_or_freetd ( p_block ) =
+        VAR has_down_block , down_block IN
+    p_res := FALSE ;
+    has_down_block , down_block <-- read_all_cfg_b2b_down ( p_block ) ;
+
+    IF has_down_block = TRUE THEN
+      VAR is_down_free , is_down_td_occupied IN
+        is_down_free := tab_ob ( down_block ) ;
+        is_down_td_occupied <-- read_otd ( down_block ) ;
+
+        IF is_down_free = TRUE or is_down_td_occupied = FALSE THEN
+          p_res := TRUE
+        ELSE
+          p_res := FALSE
+        END
+      END
+    END
+        END ; /* COMPLETE */
+
+        p_res <-- has_occupied_bd ( p_block ) =
+        VAR has_up_bd , up_bd , has_down_bd , down_bd , is_up_bd_occupied , is_down_bd_occupied IN
+    p_res := FALSE ;
+          // We start by getting all upward and downward border detectors,
+          has_up_bd , up_bd <-- read_all_cfg_b2bd_up ( p_block ) ;
+          has_down_bd , down_bd <-- read_all_cfg_b2bd_down ( p_block ) ;
+          // and initializing them to a default value of FALSE. If the block doesn't
+          // have an upward (or downward) border detector, then it won't be a member
+          // of the set obd, so read_obd() will reply with FALSE
+          is_up_bd_occupied := FALSE ;
+          is_down_bd_occupied := FALSE ;
+
+          // If an upward border detector exists, check whether it is occupied
+          IF has_up_bd = TRUE THEN
+      is_up_bd_occupied <-- read_obd ( up_bd )
+          END ;
+
+          // Same for downward border detectors
+          IF has_down_bd = TRUE THEN
+      is_down_bd_occupied <-- read_obd ( down_bd )
+          END ;
+
+          // And if any of them are indeed occupied, the response should be TRUE
+          IF is_up_bd_occupied = TRUE or is_down_bd_occupied = TRUE THEN
+            p_res := TRUE
+          END
+        END ; /* COMPLETE */
+
+        p_res <-- is_occ_unmasked_block ( p_block ) =
+        VAR is_occupied , is_masked IN
+    p_res := FALSE ;
+          is_occupied := tab_ob ( p_block ) ;
+          is_masked := tab_mb ( p_block ) ;
+
+          IF is_occupied = TRUE & is_masked = FALSE THEN
+            p_res := TRUE
+          END
+        END ; /* COMPLETE */
+
+        p_res <-- is_init_or_unalarmed_block ( p_block ) =
+        VAR is_init , is_alarming IN
+          p_res := FALSE ;
+          is_init <-- read_cc_init ( p_block ) ;
+          is_alarming := tab_tdla ( p_block ) ;
+
+          IF is_init = TRUE or is_alarming = FALSE THEN
+            p_res := TRUE
+          END
+        END ; /* COMPLETE */
+
+        p_res <-- has_up_tr_ed ( p_block ) =
+        VAR has_up_exit , up_exit IN
+    p_res := FALSE ;
+          has_up_exit , up_exit <-- read_all_cfg_b2ed_up ( p_block ) ;
+
+          // We start by checking whether there is any upwards exit detector
+          IF has_up_exit = TRUE THEN
+            VAR is_newly_released IN
+              is_newly_released <-- is_exit_newly_released ( up_exit ) ;
+
+              // And if there is, according to the specification, we check whether it
+              // was released in the previous cycle
+              IF is_newly_released = TRUE THEN
+                p_res := TRUE
+              END
+            END
+          END
+        END ; /* COMPLETE */
+
+        // Same explanation as the operation above, but on the downward direction
+        p_res <-- has_down_tr_ed ( p_block ) =
+        VAR has_down_exit , down_exit IN
+    p_res := FALSE ;
+          has_down_exit , down_exit <-- read_all_cfg_b2ed_down ( p_block ) ;
+
+          IF has_down_exit = TRUE THEN
+            VAR is_newly_released IN
+              is_newly_released <-- is_exit_newly_released ( down_exit ) ;
+
+              IF is_newly_released = TRUE THEN
+                p_res := TRUE
+              END
+            END
+          END
+        END /* COMPLETE */
+
+END

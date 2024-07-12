@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<db_xml>
+    <atelierb version="3_7_ubuntu-cvs" />
+    <project decomp_dir="/home/bigodel/uni/metodos/hackathon/block/bdp/expand_src" old_decomp_dir="/home/bigodel/uni/metodos/hackathon/block/bdp/src">
+        <!-- Definition directory list -->
+        <definition_dir path="/home/bigodel/uni/metodos/hackathon/block" />
+        <definition_dir path="/home/bigodel/uni/metodos/hackathon-2024/block" />
+        <!-- Proof mechanisms -->
+        <!-- Component file list -->
+        <component_file path="/home/bigodel/uni/metodos/hackathon-2024/block" name="block_miniservices" suffix="mch" user="bigodel">
+            <component name="block_miniservices" type="specification" />
+        </component_file>
+        <component_file path="/home/bigodel/uni/metodos/hackathon/block" name="block_miniservices_i" suffix="imp" user="bigodel">
+            <component name="block_miniservices_i" type="implementation" />
+        </component_file>
+        <component_file path="/home/bigodel/uni/metodos/hackathon/block" name="block_occupancy" suffix="mch" user="bigodel">
+            <component name="block_occupancy" type="specification" />
+        </component_file>
+        <component_file path="/home/bigodel/uni/metodos/hackathon/block" name="block_occupancy_i" suffix="imp" user="bigodel">
+            <component name="block_occupancy_i" type="implementation" />
+        </component_file>
+        <component_file path="/home/bigodel/uni/metodos/hackathon-2024/block" name="block_occupancy_it" suffix="mch" user="bigodel">
+            <component name="block_occupancy_it" type="specification" />
+        </component_file>
+        <component_file path="/home/bigodel/uni/metodos/hackathon/block" name="block_occupancy_it_i" suffix="imp" user="bigodel">
+            <component name="block_occupancy_it_i" type="implementation" />
+        </component_file>
+        <component_file path="/home/bigodel/uni/metodos/hackathon/block" name="block_occupancy_seq" suffix="mch" user="bigodel">
+            <component name="block_occupancy_seq" type="specification" />
+        </component_file>
+        <component_file path="/home/bigodel/uni/metodos/hackathon/block" name="block_occupancy_seq_i" suffix="imp" user="bigodel">
+            <component name="block_occupancy_seq_i" type="implementation" />
+        </component_file>
+        <component_file path="/home/bigodel/uni/metodos/hackathon-2024/block" name="block_services" suffix="mch" user="bigodel">
+            <component name="block_services" type="specification" />
+        </component_file>
+        <component_file path="/home/bigodel/uni/metodos/hackathon-2024/block" name="block_services_i" suffix="imp" user="bigodel">
+            <component name="block_services_i" type="implementation" />
+        </component_file>
+        <component_file path="/home/bigodel/uni/metodos/hackathon/block" name="configuration" suffix="mch" user="bigodel">
+            <component name="configuration" type="specification" />
+        </component_file>
+        <component_file path="/home/bigodel/uni/metodos/hackathon/block" name="inputs" suffix="mch" user="bigodel">
+            <component name="inputs" type="specification" />
+        </component_file>
+        <component_file path="/home/bigodel/uni/metodos/hackathon/block" name="main" suffix="mch" user="bigodel">
+            <component name="main" type="specification" />
+        </component_file>
+        <component_file path="/home/bigodel/uni/metodos/hackathon/block" name="main_i" suffix="imp" user="bigodel">
+            <component name="main_i" type="implementation" />
+        </component_file>
+    </project>
+</db_xml>

@@ -1,0 +1,29 @@
+THEORY ProofList IS
+_f(1) & _f(2) & _f(5) & _f(6) & Operation_next_iter.5,(_f(8) & _f(3) => _f(13));
+_f(1) & _f(2) & _f(5) & _f(6) & Operation_next_iter.4,(_f(8) & _f(3) => _f(12));
+_f(1) & _f(2) & _f(5) & _f(6) & Operation_next_iter.3,(_f(8) & _f(3) => _f(11));
+_f(1) & _f(2) & _f(5) & _f(6) & Operation_next_iter.2,(_f(8) & _f(3) => _f(10));
+_f(1) & _f(2) & _f(5) & _f(6) & Operation_next_iter.1,(_f(8) & _f(3) => _f(9));
+_f(1) & _f(2) & _f(5) & _f(6) & Operation_init_iter.2,(_f(3) => _f(7));
+_f(1) & _f(2) & _f(5) & _f(6) & Operation_init_iter.1,(_f(3) => _f(4));
+_f(1) & _f(2) & Initialisation.1,(_f(3) => _f(4))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+((First) : (NAT)) & ((Last) : (NAT)) & (First <= Last) & (Last +1 <= 2147483647) & ((Trains) = (((First) .. (Last)))) & is_MP85 : Trains +-> BOOL & dom(is_MP85) = Trains & ((is_MP85) : (((Trains) --> (BOOL))));
+"Refinement is correct";
+(({}) = (((First) .. ((First - 1)))));
+Todo : POW( Trains) & Done : POW( Trains) & ((((Todo) \/ (Done))) = (Trains)) & ((((Todo) /\ (Done))) = ({}));
+((index$1) : (NAT)) & ((Todo) = (((index$1) .. (Last)))) & ((Done) = (((First) .. ((index$1 - 1)))));
+((bool((First <= Last))) = (bool(not(((Trains) = ({}))))));
+not(((Todo) = ({})));
+(((index$1 + 1)) : (NAT));
+((bool(((index$1 + 1) <= Last))) = (bool(not((((((index$1 + 1)) .. (Last))) = ({}))))));
+((index$1) : (Todo));
+(((((index$1 + 1)) .. (Last))) = ((Todo - ({index$1}))));
+((((Done) \/ (({index$1})))) = (((First) .. (((index$1 + 1) - 1)))))
+END
+&
+THEORY EnumerateX
+END

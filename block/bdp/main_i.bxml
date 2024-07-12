@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Machine xmlns='https://www.atelierb.eu/Formats/bxml' version='1.0' name='main_i' type='implementation' position='true' semantic='true' b0check='false'>
+<Abstraction>main</Abstraction>
+<Imports>
+<Attr>
+<Pos l='18' c='1' s='7'/>
+</Attr>
+<Referenced_Machine>
+<Attr>
+<Pos l='19' c='9' s='6'/>
+</Attr>
+<Name>inputs</Name>
+</Referenced_Machine>
+<Referenced_Machine>
+<Attr>
+<Pos l='20' c='9' s='19'/>
+</Attr>
+<Name>block_occupancy_seq</Name>
+</Referenced_Machine>
+</Imports>
+<Sees>
+<Attr>
+<Pos l='15' c='1' s='4'/>
+</Attr>
+<Referenced_Machine>
+<Attr>
+<Pos l='16' c='9' s='13'/>
+</Attr>
+<Name>configuration</Name>
+</Referenced_Machine>
+</Sees>
+<Initialisation>
+<Skip/>
+</Initialisation>
+<Operations>
+<Operation name='execute_cycle'>
+<Attr>
+<Pos l='24' c='9' s='13' endLine='52'/>
+</Attr>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='49' c='17' s='11'/>
+</Attr>
+<Name>
+<Id value='read_inputs'>
+<Attr>
+<Pos l='49' c='17' s='11'/>
+</Attr>
+</Id>
+</Name>
+</Operation_Call>
+<Operation_Call>
+<Attr>
+<Pos l='50' c='17' s='16'/>
+</Attr>
+<Name>
+<Id value='save_inputs_prev'>
+<Attr>
+<Pos l='50' c='17' s='16'/>
+</Attr>
+</Id>
+</Name>
+</Operation_Call>
+<Operation_Call>
+<Attr>
+<Pos l='51' c='17' s='19'/>
+</Attr>
+<Name>
+<Id value='set_block_occupancy'>
+<Attr>
+<Pos l='51' c='17' s='19'/>
+</Attr>
+</Id>
+</Name>
+</Operation_Call>
+</Nary_Sub>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos>
+<Type id='0'>
+<Id value='BOOL'/>
+</Type>
+<Type id='1'>
+<Id value='INTEGER'/>
+</Type>
+<Type id='2'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Type>
+<Type id='3'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+</TypeInfos>
+
+</Machine>

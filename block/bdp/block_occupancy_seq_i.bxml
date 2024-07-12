@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Machine xmlns='https://www.atelierb.eu/Formats/bxml' version='1.0' name='block_occupancy_seq_i' type='implementation' position='true' semantic='true' b0check='false'>
+<Abstraction>block_occupancy_seq</Abstraction>
+<Imports>
+<Attr>
+<Pos l='11' c='1' s='7'/>
+</Attr>
+<Referenced_Machine>
+<Attr>
+<Pos l='12' c='9' s='15'/>
+</Attr>
+<Name>block_occupancy</Name>
+</Referenced_Machine>
+</Imports>
+<Sees>
+<Attr>
+<Pos l='7' c='1' s='4'/>
+</Attr>
+<Referenced_Machine>
+<Attr>
+<Pos l='8' c='9' s='13'/>
+</Attr>
+<Name>configuration</Name>
+</Referenced_Machine>
+<Referenced_Machine>
+<Attr>
+<Pos l='9' c='9' s='6'/>
+</Attr>
+<Name>inputs</Name>
+</Referenced_Machine>
+</Sees>
+<Initialisation>
+<Skip/>
+</Initialisation>
+<Operations>
+<Operation name='set_block_occupancy'>
+<Attr>
+<Pos l='17' c='9' s='19' endLine='49'/>
+</Attr>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='43' c='17' s='13'/>
+</Attr>
+<Name>
+<Id value='unmask_blocks'>
+<Attr>
+<Pos l='43' c='17' s='13'/>
+</Attr>
+</Id>
+</Name>
+</Operation_Call>
+<Operation_Call>
+<Attr>
+<Pos l='44' c='17' s='17'/>
+</Attr>
+<Name>
+<Id value='release_tdl_alarm'>
+<Attr>
+<Pos l='44' c='17' s='17'/>
+</Attr>
+</Id>
+</Name>
+</Operation_Call>
+<Operation_Call>
+<Attr>
+<Pos l='45' c='17' s='13'/>
+</Attr>
+<Name>
+<Id value='set_tdl_alarm'>
+<Attr>
+<Pos l='45' c='17' s='13'/>
+</Attr>
+</Id>
+</Name>
+</Operation_Call>
+<Operation_Call>
+<Attr>
+<Pos l='46' c='17' s='11'/>
+</Attr>
+<Name>
+<Id value='mask_blocks'>
+<Attr>
+<Pos l='46' c='17' s='11'/>
+</Attr>
+</Id>
+</Name>
+</Operation_Call>
+<Operation_Call>
+<Attr>
+<Pos l='47' c='17' s='14'/>
+</Attr>
+<Name>
+<Id value='release_blocks'>
+<Attr>
+<Pos l='47' c='17' s='14'/>
+</Attr>
+</Id>
+</Name>
+</Operation_Call>
+<Operation_Call>
+<Attr>
+<Pos l='48' c='17' s='13'/>
+</Attr>
+<Name>
+<Id value='occupy_blocks'>
+<Attr>
+<Pos l='48' c='17' s='13'/>
+</Attr>
+</Id>
+</Name>
+</Operation_Call>
+</Nary_Sub>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos>
+<Type id='0'>
+<Id value='BOOL'/>
+</Type>
+<Type id='1'>
+<Id value='INTEGER'/>
+</Type>
+<Type id='2'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Type>
+<Type id='3'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+</TypeInfos>
+
+</Machine>

@@ -1,0 +1,70 @@
+THEORY BalanceX IS
+configuration,12,0,0,11,0,0,0;
+WellDefinednessProperties,4,0,0,3,0,0,0;
+WellDefinedness_read_all_cfg_b2b_down,1,0,0,1,0,0,0;
+WellDefinedness_read_all_cfg_b2b_up,1,0,0,1,0,0,0;
+WellDefinedness_read_all_cfg_b2bd_down,1,0,0,1,0,0,0;
+WellDefinedness_read_all_cfg_b2bd_up,1,0,0,1,0,0,0;
+WellDefinedness_read_all_cfg_b2ed_down,1,0,0,1,0,0,0;
+WellDefinedness_read_all_cfg_b2ed_up,1,0,0,1,0,0,0;
+WellDefinedness_read_bijection_t_block,1,0,0,1,0,0,0;
+WellDefinedness_read_card_t_block,1,0,0,1,0,0,0
+END
+&
+THEORY ProofState IS
+Proved(0);
+Proved(0);
+Proved(0);
+Proved(0);
+Proved(0);
+Proved(0);
+Proved(0);
+Proved(0);
+Proved(0);
+Proved(0);
+Proved(0);
+Unproved
+END
+&
+THEORY MethodList IS
+pr;
+pr;
+pr;
+pr;
+pr;
+pr;
+pr;
+pr;
+pr;
+pr;
+pr;
+?
+END
+&
+THEORY PassList IS
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),(?; 0; 1; 2; 3)
+END
+&
+THEORY Status IS
+configuration,12,0,11,0,0,0;
+WellDefinednessProperties,4,0,3,0,0,0;
+WellDefinedness_read_all_cfg_b2b_down,1,0,1,0,0,0;
+WellDefinedness_read_all_cfg_b2b_up,1,0,1,0,0,0;
+WellDefinedness_read_all_cfg_b2bd_down,1,0,1,0,0,0;
+WellDefinedness_read_all_cfg_b2bd_up,1,0,1,0,0,0;
+WellDefinedness_read_all_cfg_b2ed_down,1,0,1,0,0,0;
+WellDefinedness_read_all_cfg_b2ed_up,1,0,1,0,0,0;
+WellDefinedness_read_bijection_t_block,1,0,1,0,0,0;
+WellDefinedness_read_card_t_block,1,0,1,0,0,0
+END

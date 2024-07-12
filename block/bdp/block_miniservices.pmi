@@ -1,0 +1,46 @@
+THEORY BalanceX IS
+block_miniservices,6,0,0,6,0,0,0;
+Operation_alarm_block,1,0,0,1,0,0,0;
+Operation_mask_block,1,0,0,1,0,0,0;
+Operation_occ_block,1,0,0,1,0,0,0;
+Operation_unalarm_block,1,0,0,1,0,0,0;
+Operation_unmask_block,1,0,0,1,0,0,0;
+Operation_unocc_block,1,0,0,1,0,0,0
+END
+&
+THEORY ProofState IS
+Proved(0);
+Proved(0);
+Proved(0);
+Proved(0);
+Proved(0);
+Proved(0)
+END
+&
+THEORY MethodList IS
+pr;
+pr;
+pr;
+pr;
+pr;
+pr
+END
+&
+THEORY PassList IS
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?
+END
+&
+THEORY Status IS
+block_miniservices,6,0,6,0,0,0;
+Operation_alarm_block,1,0,1,0,0,0;
+Operation_mask_block,1,0,1,0,0,0;
+Operation_occ_block,1,0,1,0,0,0;
+Operation_unalarm_block,1,0,1,0,0,0;
+Operation_unmask_block,1,0,1,0,0,0;
+Operation_unocc_block,1,0,1,0,0,0
+END

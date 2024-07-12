@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Proof_Obligations version="1.0" xmlns="https://www.atelierb.eu/Formats/pog" author="pmi2Pos">
+<Proof_Obligation>
+<Tag>WellDefinedness_nb_MP85</Tag>
+<Simple_Goal status="Unproved">
+<Tag>Operation is well defined</Tag>
+<Proof_State methodList="?" proofState="Unproved" passList="Force(0),(?; 0; 1; 2; 3)"/>
+</Simple_Goal>
+</Proof_Obligation>
+</Proof_Obligations>

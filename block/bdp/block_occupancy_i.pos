@@ -1,0 +1,581 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Proof_Obligations author="pmi2Pos" version="1.0" xmlns="https://www.atelierb.eu/Formats/pog">
+<Proof_Obligation>
+<Tag>Operation_unmask_blocks</Tag>
+<Simple_Goal status="Proved">
+<Tag>Loop initialisation</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop initialisation</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop initialisation</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Precondition predicate</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(2)" passList="Force(2),(?; 0; 1)"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="mp &amp; ss &amp; mp" proofState="Proved(Util)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Unproved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="?" proofState="Unproved" passList="Force(0),(?; 0; 1; 2; 3)"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(2)" passList="Force(2),(?; 0; 1)"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="mp &amp; ss &amp; mp" proofState="Proved(Util)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="dd(0) &amp; eh(mb$2,_h,Goal) &amp; mp" proofState="Proved(Util)" passList="Force(0),(?; 0)"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(2)" passList="Force(2),(?; 0; 1)"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="mp &amp; ss &amp; mp" proofState="Proved(Util)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Unproved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="?" proofState="Unproved" passList="Force(0),(?; 0; 1; 2; 3)"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop variant is positive</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Variant is decreasing</Tag>
+<Proof_State methodList="dd(0) &amp; ah(block_to_treat : FIN(block_to_treat)) &amp; ah(block_to_treat &lt;: t_block) &amp; dd(0) &amp; ah(t_block : FIN(INTEGER)) &amp; mp &amp; mp &amp; ah(block_to_treat : FIN(INTEGER)) &amp; mp &amp; mp &amp; mp &amp; ar(SimplifyTryEnsCard.3,Goal) &amp; ah(block_to_treat/\{n_bl} = {n_bl}) &amp; mp &amp; dd(0) &amp; eh(block_to_treat/\{n_bl},_h,Goal) &amp; ss &amp; mp" proofState="Proved(Util)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Variant is decreasing</Tag>
+<Proof_State methodList="dd(0) &amp; ah(block_to_treat : FIN(block_to_treat)) &amp; ah(block_to_treat &lt;: t_block) &amp; dd(0) &amp; ah(t_block : FIN(INTEGER)) &amp; mp &amp; mp &amp; ah(block_to_treat : FIN(INTEGER)) &amp; mp &amp; mp &amp; mp &amp; ar(SimplifyTryEnsCard.3,Goal) &amp; ah(block_to_treat/\{n_bl} = {n_bl}) &amp; mp &amp; dd(0) &amp; eh(block_to_treat/\{n_bl},_h,Goal) &amp; ss &amp; mp" proofState="Proved(Util)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Variant is decreasing</Tag>
+<Proof_State methodList="dd(0) &amp; ah(block_to_treat : FIN(block_to_treat)) &amp; ah(block_to_treat &lt;: t_block) &amp; dd(0) &amp; ah(t_block : FIN(INTEGER)) &amp; mp &amp; mp &amp; ah(block_to_treat : FIN(INTEGER)) &amp; mp &amp; mp &amp; mp &amp; ar(SimplifyTryEnsCard.3,Goal) &amp; ah(block_to_treat/\{n_bl} = {n_bl}) &amp; mp &amp; dd(0) &amp; eh(block_to_treat/\{n_bl},_h,Goal) &amp; ss &amp; mp" proofState="Proved(Util)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Unproved">
+<Tag>End of loop</Tag>
+<Proof_State methodList="?" proofState="Unproved" passList="Force(0),(?; 0; 1; 2; 3)"/>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>Operation_set_tdl_alarm</Tag>
+<Simple_Goal status="Proved">
+<Tag>Loop initialisation</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop initialisation</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop initialisation</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Precondition predicate</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(2)" passList="Force(2),(?; 0; 1)"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="mp &amp; ss &amp; mp" proofState="Proved(Util)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Unproved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="?" proofState="Unproved" passList="Force(0),(?; 0; 1; 2; 3)"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(2)" passList="Force(2),(?; 0; 1)"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="mp &amp; ss &amp; mp" proofState="Proved(Util)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Unproved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="?" proofState="Unproved" passList="Force(0),(?; 0; 1; 2; 3)"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(2)" passList="Force(2),(?; 0; 1)"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="mp &amp; ss &amp; mp" proofState="Proved(Util)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Unproved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="?" proofState="Unproved" passList="Force(0),(?; 0; 1; 2; 3)"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop variant is positive</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Variant is decreasing</Tag>
+<Proof_State methodList="dd(0) &amp; ah(block_to_treat : FIN(block_to_treat)) &amp; ah(block_to_treat &lt;: t_block) &amp; dd(0) &amp; ah(t_block : FIN(INTEGER)) &amp; mp &amp; mp &amp; ah(block_to_treat : FIN(INTEGER)) &amp; mp &amp; mp &amp; mp &amp; ar(SimplifyTryEnsCard.3,Goal) &amp; ah(block_to_treat/\{n_bl} = {n_bl}) &amp; mp &amp; dd(0) &amp; eh(block_to_treat/\{n_bl},_h,Goal) &amp; ss &amp; mp" proofState="Proved(Util)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Variant is decreasing</Tag>
+<Proof_State methodList="dd(0) &amp; ah(block_to_treat : FIN(block_to_treat)) &amp; ah(block_to_treat &lt;: t_block) &amp; dd(0) &amp; ah(t_block : FIN(INTEGER)) &amp; mp &amp; mp &amp; ah(block_to_treat : FIN(INTEGER)) &amp; mp &amp; mp &amp; mp &amp; ar(SimplifyTryEnsCard.3,Goal) &amp; ah(block_to_treat/\{n_bl} = {n_bl}) &amp; mp &amp; dd(0) &amp; eh(block_to_treat/\{n_bl},_h,Goal) &amp; ss &amp; mp" proofState="Proved(Util)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Variant is decreasing</Tag>
+<Proof_State methodList="dd(0) &amp; ah(block_to_treat : FIN(block_to_treat)) &amp; ah(block_to_treat &lt;: t_block) &amp; dd(0) &amp; ah(t_block : FIN(INTEGER)) &amp; mp &amp; mp &amp; ah(block_to_treat : FIN(INTEGER)) &amp; mp &amp; mp &amp; mp &amp; ar(SimplifyTryEnsCard.3,Goal) &amp; ah(block_to_treat/\{n_bl} = {n_bl}) &amp; mp &amp; dd(0) &amp; eh(block_to_treat/\{n_bl},_h,Goal) &amp; ss &amp; mp" proofState="Proved(Util)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Unproved">
+<Tag>End of loop</Tag>
+<Proof_State methodList="?" proofState="Unproved" passList="Force(0),(?; 0; 1; 2; 3)"/>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>Operation_mask_blocks</Tag>
+<Simple_Goal status="Proved">
+<Tag>Loop initialisation</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop initialisation</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop initialisation</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Precondition predicate</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(2)" passList="Force(2),(?; 0; 1)"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="mp &amp; ss &amp; mp" proofState="Proved(Util)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Unproved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="?" proofState="Unproved" passList="Force(0),(?; 0; 1; 2; 3)"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(2)" passList="Force(2),(?; 0; 1)"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="mp &amp; ss &amp; mp" proofState="Proved(Util)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Unproved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="?" proofState="Unproved" passList="Force(0),(?; 0; 1; 2; 3)"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(2)" passList="Force(2),(?; 0; 1)"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="mp &amp; ss &amp; mp" proofState="Proved(Util)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Unproved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="?" proofState="Unproved" passList="Force(0),(?; 0; 1; 2; 3)"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop variant is positive</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Variant is decreasing</Tag>
+<Proof_State methodList="dd(0) &amp; ah(block_to_treat : FIN(block_to_treat)) &amp; ah(block_to_treat &lt;: t_block) &amp; dd(0) &amp; ah(t_block : FIN(INTEGER)) &amp; mp &amp; mp &amp; ah(block_to_treat : FIN(INTEGER)) &amp; mp &amp; mp &amp; mp &amp; ar(SimplifyTryEnsCard.3,Goal) &amp; ah(block_to_treat/\{n_bl} = {n_bl}) &amp; mp &amp; dd(0) &amp; eh(block_to_treat/\{n_bl},_h,Goal) &amp; ss &amp; mp" proofState="Proved(Util)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Variant is decreasing</Tag>
+<Proof_State methodList="dd(0) &amp; ah(block_to_treat : FIN(block_to_treat)) &amp; ah(block_to_treat &lt;: t_block) &amp; dd(0) &amp; ah(t_block : FIN(INTEGER)) &amp; mp &amp; mp &amp; ah(block_to_treat : FIN(INTEGER)) &amp; mp &amp; mp &amp; mp &amp; ar(SimplifyTryEnsCard.3,Goal) &amp; ah(block_to_treat/\{n_bl} = {n_bl}) &amp; mp &amp; dd(0) &amp; eh(block_to_treat/\{n_bl},_h,Goal) &amp; ss &amp; mp" proofState="Proved(Util)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Variant is decreasing</Tag>
+<Proof_State methodList="dd(0) &amp; ah(block_to_treat : FIN(block_to_treat)) &amp; ah(block_to_treat &lt;: t_block) &amp; dd(0) &amp; ah(t_block : FIN(INTEGER)) &amp; mp &amp; mp &amp; ah(block_to_treat : FIN(INTEGER)) &amp; mp &amp; mp &amp; mp &amp; ar(SimplifyTryEnsCard.3,Goal) &amp; ah(block_to_treat/\{n_bl} = {n_bl}) &amp; mp &amp; dd(0) &amp; eh(block_to_treat/\{n_bl},_h,Goal) &amp; ss &amp; mp" proofState="Proved(Util)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Unproved">
+<Tag>End of loop</Tag>
+<Proof_State methodList="?" proofState="Unproved" passList="Force(0),(?; 0; 1; 2; 3)"/>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>Operation_release_blocks</Tag>
+<Simple_Goal status="Proved">
+<Tag>Loop initialisation</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop initialisation</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop initialisation</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Precondition predicate</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(2)" passList="Force(2),(?; 0; 1)"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="mp &amp; ss &amp; mp" proofState="Proved(Util)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Unproved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="?" proofState="Unproved" passList="Force(0),(?; 0; 1; 2; 3)"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(2)" passList="Force(2),(?; 0; 1)"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="mp &amp; ss &amp; mp" proofState="Proved(Util)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Unproved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="?" proofState="Unproved" passList="Force(0),(?; 0; 1; 2; 3)"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop variant is positive</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Variant is decreasing</Tag>
+<Proof_State methodList="dd(0) &amp; ah(block_to_treat : FIN(block_to_treat)) &amp; ah(block_to_treat &lt;: t_block) &amp; dd(0) &amp; ah(t_block : FIN(INTEGER)) &amp; mp &amp; mp &amp; ah(block_to_treat : FIN(INTEGER)) &amp; mp &amp; mp &amp; mp &amp; ar(SimplifyTryEnsCard.3,Goal) &amp; ah(block_to_treat/\{n_bl} = {n_bl}) &amp; mp &amp; dd(0) &amp; eh(block_to_treat/\{n_bl},_h,Goal) &amp; ss &amp; mp" proofState="Proved(Util)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Variant is decreasing</Tag>
+<Proof_State methodList="dd(0) &amp; ah(block_to_treat : FIN(block_to_treat)) &amp; ah(block_to_treat &lt;: t_block) &amp; dd(0) &amp; ah(t_block : FIN(INTEGER)) &amp; mp &amp; mp &amp; ah(block_to_treat : FIN(INTEGER)) &amp; mp &amp; mp &amp; mp &amp; ar(SimplifyTryEnsCard.3,Goal) &amp; ah(block_to_treat/\{n_bl} = {n_bl}) &amp; mp &amp; dd(0) &amp; eh(block_to_treat/\{n_bl},_h,Goal) &amp; ss &amp; mp" proofState="Proved(Util)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Unproved">
+<Tag>End of loop</Tag>
+<Proof_State methodList="?" proofState="Unproved" passList="Force(0),(?; 0; 1; 2; 3)"/>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>Operation_occupy_blocks</Tag>
+<Simple_Goal status="Proved">
+<Tag>Loop initialisation</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop initialisation</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop initialisation</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Precondition predicate</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(2)" passList="Force(2),(?; 0; 1)"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="mp &amp; ss &amp; mp" proofState="Proved(Util)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Unproved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="?" proofState="Unproved" passList="Force(0),(?; 0; 1; 2; 3)"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(2)" passList="Force(2),(?; 0; 1)"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="mp &amp; ss &amp; mp" proofState="Proved(Util)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Unproved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="?" proofState="Unproved" passList="Force(0),(?; 0; 1; 2; 3)"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="pr" proofState="Proved(2)" passList="Force(2),(?; 0; 1)"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="mp &amp; ss &amp; mp" proofState="Proved(Util)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Unproved">
+<Tag>Loop invariant is preserved</Tag>
+<Proof_State methodList="?" proofState="Unproved" passList="Force(0),(?; 0; 1; 2; 3)"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Loop variant is positive</Tag>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Unproved">
+<Tag>Variant is decreasing</Tag>
+<Proof_State methodList="?" proofState="Unproved" passList="Force(0),(?; 0; 1; 2; 3)"/>
+</Simple_Goal>
+<Simple_Goal status="Unproved">
+<Tag>Variant is decreasing</Tag>
+<Proof_State methodList="?" proofState="Unproved" passList="Force(0),(?; 0; 1; 2; 3)"/>
+</Simple_Goal>
+<Simple_Goal status="Unproved">
+<Tag>Variant is decreasing</Tag>
+<Proof_State methodList="?" proofState="Unproved" passList="Force(0),(?; 0; 1; 2; 3)"/>
+</Simple_Goal>
+<Simple_Goal status="Unproved">
+<Tag>End of loop</Tag>
+<Proof_State methodList="?" proofState="Unproved" passList="Force(0),(?; 0; 1; 2; 3)"/>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinedness_unmask_blocks</Tag>
+<Simple_Goal status="Unproved">
+<Tag>Operation is well defined</Tag>
+<Proof_State methodList="?" proofState="Unproved" passList="Force(0),(?; 0; 1; 2; 3)"/>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinedness_set_tdl_alarm</Tag>
+<Simple_Goal status="Unproved">
+<Tag>Operation is well defined</Tag>
+<Proof_State methodList="?" proofState="Unproved" passList="Force(0),(?; 0; 1; 2; 3)"/>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinedness_mask_blocks</Tag>
+<Simple_Goal status="Unproved">
+<Tag>Operation is well defined</Tag>
+<Proof_State methodList="?" proofState="Unproved" passList="Force(0),(?; 0; 1; 2; 3)"/>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinedness_release_blocks</Tag>
+<Simple_Goal status="Unproved">
+<Tag>Operation is well defined</Tag>
+<Proof_State methodList="?" proofState="Unproved" passList="Force(0),(?; 0; 1; 2; 3)"/>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinedness_occupy_blocks</Tag>
+<Simple_Goal status="Unproved">
+<Tag>Operation is well defined</Tag>
+<Proof_State methodList="?" proofState="Unproved" passList="Force(0),(?; 0; 1; 2; 3)"/>
+</Simple_Goal>
+</Proof_Obligation>
+</Proof_Obligations>

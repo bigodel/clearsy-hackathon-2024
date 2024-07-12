@@ -1,0 +1,21 @@
+THEORY BalanceX IS
+Iter_main,1,0,0,0,0,0,0;
+WellDefinedness_nb_MP85,1,0,0,0,0,0,0
+END
+&
+THEORY ProofState IS
+Unproved
+END
+&
+THEORY MethodList IS
+?
+END
+&
+THEORY PassList IS
+Force(0),(?; 0; 1; 2; 3)
+END
+&
+THEORY Status IS
+Iter_main,1,0,0,0,0,0;
+WellDefinedness_nb_MP85,1,0,0,0,0,0
+END

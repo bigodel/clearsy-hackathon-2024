@@ -1,0 +1,46 @@
+THEORY BalanceX IS
+block_occupancy_it,8,2,0,6,0,0,0;
+Initialisation,2,0,0,2,0,0,0;
+Operation_init_iteration_t_block,2,0,0,2,0,0,0;
+Operation_iterate_t_block,4,2,0,2,0,0,0
+END
+&
+THEORY ProofState IS
+Proved(Util);
+Proved(Util);
+Proved(0);
+Proved(0);
+Proved(0);
+Proved(0);
+Proved(0);
+Proved(0)
+END
+&
+THEORY MethodList IS
+dd(0) & mp & pp(rt.1 | 5);
+dd(0) & mp & pp(rt.1 | 5);
+pr;
+pr;
+pr;
+pr;
+pr;
+pr
+END
+&
+THEORY PassList IS
+Force(0),(?; 0);
+Force(0),(?; 0);
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?
+END
+&
+THEORY Status IS
+block_occupancy_it,8,2,6,0,0,0;
+Initialisation,2,0,2,0,0,0;
+Operation_init_iteration_t_block,2,0,2,0,0,0;
+Operation_iterate_t_block,4,2,2,0,0,0
+END

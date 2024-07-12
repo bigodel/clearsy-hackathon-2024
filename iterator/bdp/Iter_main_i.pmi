@@ -1,0 +1,105 @@
+THEORY BalanceX IS
+Iter_main_i,27,0,0,13,0,0,0;
+Operation_all_MP85,12,0,0,7,0,0,0;
+Operation_nb_MP85,12,0,0,6,0,0,0;
+WellDefinedness_all_MP85,1,0,0,0,0,0,0;
+WellDefinedness_nb_MP85,2,0,0,0,0,0,0
+END
+&
+THEORY ProofState IS
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Proved(0);
+Proved(0);
+Unproved;
+Proved(0);
+Unproved;
+Proved(0);
+Proved(0);
+Proved(0);
+Proved(0);
+Unproved;
+Unproved;
+Unproved;
+Proved(0);
+Proved(0);
+Unproved;
+Unproved;
+Unproved;
+Proved(0);
+Proved(0);
+Proved(0);
+Proved(0)
+END
+&
+THEORY MethodList IS
+?;
+?;
+?;
+?;
+?;
+?;
+pr;
+pr;
+?;
+pr;
+?;
+pr;
+pr;
+pr;
+pr;
+?;
+?;
+?;
+pr;
+pr;
+?;
+?;
+?;
+pr;
+pr;
+pr;
+pr
+END
+&
+THEORY PassList IS
+Force(0),(?; 0; 1; 2; 3);
+Force(0),(?; 0; 1; 2; 3);
+Force(0),(?; 0; 1; 2; 3);
+Force(0),(?; 0; 1; 2; 3);
+Force(0),(?; 0; 1; 2; 3);
+Force(0),(?; 0; 1; 2; 3);
+Force(0),?;
+Force(0),?;
+Force(0),(?; 0; 1; 2; 3);
+Force(0),?;
+Force(0),(?; 0; 1; 2; 3);
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),(?; 0; 1; 2; 3);
+Force(0),(?; 0; 1; 2; 3);
+Force(0),(?; 0; 1; 2; 3);
+Force(0),?;
+Force(0),?;
+Force(0),(?; 0; 1; 2; 3);
+Force(0),(?; 0; 1; 2; 3);
+Force(0),(?; 0; 1; 2; 3);
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?
+END
+&
+THEORY Status IS
+Iter_main_i,27,0,13,0,0,0;
+Operation_all_MP85,12,0,7,0,0,0;
+Operation_nb_MP85,12,0,6,0,0,0;
+WellDefinedness_all_MP85,1,0,0,0,0,0;
+WellDefinedness_nb_MP85,2,0,0,0,0,0
+END

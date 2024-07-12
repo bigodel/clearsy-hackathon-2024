@@ -1,0 +1,46 @@
+THEORY BalanceX IS
+Iter_services_i,8,0,0,5,2,0,0;
+Initialisation,1,0,0,1,0,0,0;
+Operation_init_iter,2,0,0,1,1,0,0;
+Operation_next_iter,5,0,0,3,1,0,0
+END
+&
+THEORY ProofState IS
+Unproved;
+Proved(0);
+Proved(0);
+Proved(1);
+Proved(0);
+Proved(1);
+Proved(0);
+Proved(0)
+END
+&
+THEORY MethodList IS
+?;
+pr;
+pr;
+pr;
+pr;
+pr;
+pr;
+pr
+END
+&
+THEORY PassList IS
+Force(0),(?; 0; 1; 2; 3);
+Force(0),?;
+Force(0),?;
+Force(1),(?; 0);
+Force(0),?;
+Force(1),(?; 0);
+Force(0),?;
+Force(0),?
+END
+&
+THEORY Status IS
+Iter_services_i,8,0,7,0,0,0;
+Initialisation,1,0,1,0,0,0;
+Operation_init_iter,2,0,2,0,0,0;
+Operation_next_iter,5,0,4,0,0,0
+END

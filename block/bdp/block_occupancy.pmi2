@@ -1,0 +1,41 @@
+THEORY BalanceX IS
+block_occupancy,5,2,0,2,0,1,0;
+Operation_mask_blocks,1,1,0,0,0,0,0;
+Operation_occupy_blocks,1,1,0,0,0,0,0;
+Operation_release_blocks,1,0,0,1,0,0,0;
+Operation_set_tdl_alarm,1,0,0,1,0,0,0;
+Operation_unmask_blocks,1,0,0,0,0,1,0
+END
+&
+THEORY ProofState IS
+Proved(Util);
+Proved(0);
+Proved(Util);
+Proved(0);
+Proved(2)
+END
+&
+THEORY MethodList IS
+dd(0) & mp & pp(rt.1 | 5) & mp;
+pr;
+dd(0) & mp & pp(rt.1 | 5);
+pr;
+pr
+END
+&
+THEORY PassList IS
+Force(0),(?; 0; 1; 2; 3);
+Force(0),?;
+Force(0),(?; 0; 1; 2; 3);
+Force(0),?;
+Force(2),(?; 0; 1)
+END
+&
+THEORY Status IS
+block_occupancy,5,2,3,0,0,0;
+Operation_mask_blocks,1,1,0,0,0,0;
+Operation_occupy_blocks,1,1,0,0,0,0;
+Operation_release_blocks,1,0,1,0,0,0;
+Operation_set_tdl_alarm,1,0,1,0,0,0;
+Operation_unmask_blocks,1,0,1,0,0,0
+END

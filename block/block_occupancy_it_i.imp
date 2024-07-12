@@ -1,0 +1,37 @@
+IMPLEMENTATION
+	block_occupancy_it_i
+	
+REFINES
+	block_occupancy_it
+	
+SEES
+  configuration
+
+CONCRETE_VARIABLES
+  rg_t_block_current
+
+INVARIANT
+  rg_t_block_current : NAT & 
+  rg_t_block_current : (0..size(bijection_t_block)) &
+  block_to_treat = bijection_t_block[(1..rg_t_block_current)] 
+//  & treated_block = bijection_t_block[((rg_t_block_current + 1)..size(bijection_t_block))]
+
+INITIALISATION
+  rg_t_block_current <-- read_card_t_block /* REPLACES WITH CORRECT INIT */
+
+OPERATIONS
+
+   cond <-- init_iteration_t_block =
+   BEGIN
+     rg_t_block_current <-- read_card_t_block;
+     cond := bool(rg_t_block_current >= 1)
+   END; /* TO COMPLETE */
+
+   cond, bl <-- iterate_t_block = 
+   BEGIN
+     bl <-- read_bijection_t_block(rg_t_block_current);
+     rg_t_block_current := rg_t_block_current - 1;
+     cond := bool(rg_t_block_current >= 1)
+   END /* TO COMPLETE */
+
+END

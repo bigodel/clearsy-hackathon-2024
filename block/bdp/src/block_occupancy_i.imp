@@ -1,0 +1,178 @@
+﻿IMPLEMENTATION
+        block_occupancy_i
+REFINES
+        block_occupancy
+SEES
+        configuration ,
+        inputs
+
+IMPORTS
+        block_occupancy_it , block_services
+
+PROMOTES
+        read_tdla , read_ob
+
+
+
+
+
+
+
+OPERATIONS
+
+        unmask_blocks = VAR l_cont IN
+                l_cont <-- init_iteration_t_block ;
+                WHILE l_cont = TRUE DO
+                        VAR l_block , l_mask , l_remove IN
+                                l_cont , l_block <-- iterate_t_block ;
+                                l_mask <-- read_mb ( l_block ) ;
+                                IF l_mask = TRUE THEN
+                                        l_remove <-- cond_unmask ( l_block ) ;
+                                        IF l_remove = TRUE THEN
+                                                unmask_block ( l_block )
+                                        END
+                                END
+                        END
+                INVARIANT
+      l_cont = bool ( block_to_treat /= {} ) &
+      block_to_treat <: t_block &
+      treated_block <: t_block &
+      block_to_treat /\ treated_block = {} &
+      block_to_treat \/ treated_block = t_block &
+      mb <: t_block &
+      // At each iteration we're removing the treated blocks that satisfy the
+      // condition to unmask from the set of masked blocks
+      mb = mb$0 - (
+        // Get all blocks that satisfy the condition for unmasking
+        ( ( t_block - ob ) \/
+          ( cfg_b2b_up ~ [ ( t_block - otd ) \/ ( t_block - ob ) ] /\ cfg_b2b_down ~ [ ( t_block - otd ) \/ ( t_block - ob ) ] ) )
+        // and only consider those that were already treated
+        /\ treated_block
+      )
+                VARIANT
+                        card ( block_to_treat )
+                END
+        END ;
+
+        release_tdl_alarm = VAR l_clear IN
+                l_clear <-- read_cc_tdl_ack ;
+                IF l_clear  = TRUE THEN
+                        clear_tdla
+                END
+        END ;
+
+        set_tdl_alarm = VAR cont IN
+          cont <-- init_iteration_t_block ;
+          WHILE cont = TRUE DO
+            VAR block , is_alarming , should_alarm IN
+              cont , block <-- iterate_t_block ;
+              is_alarming <-- read_tdla ( block ) ;
+              // If the block is already alarming, don't do anything
+              IF is_alarming = FALSE THEN
+                should_alarm <-- cond_alarm ( block ) ;
+                // Otherwise check if the alarming condition was met
+                IF should_alarm = TRUE THEN
+                  alarm_block ( block )
+                END
+              END
+            END
+          INVARIANT
+            cont = bool ( block_to_treat /= {} ) &
+      block_to_treat <: t_block &
+      treated_block <: t_block &
+      block_to_treat /\ treated_block = {} &
+      block_to_treat \/ treated_block = t_block &
+      tdla <: t_block &
+      // All of the treated blocks that match the alarming condition should be
+      // included in the alarm set
+      tdla = tdla$0 \/ ( ( ( ob /\ ( t_block - otd ) ) - mb ) /\ treated_block )
+          VARIANT
+            card ( block_to_treat )
+          END
+        END ;
+
+        mask_blocks = VAR cont IN
+          cont <-- init_iteration_t_block ;
+          WHILE cont = TRUE DO
+            VAR block , is_masked , should_mask IN
+              cont , block <-- iterate_t_block ;
+              is_masked <-- read_mb ( block ) ;
+              // If the block is already masked, don't do anything
+              IF is_masked = FALSE THEN
+                should_mask <-- cond_mask ( block ) ;
+                // Otherwise check if the masking condition was met
+                IF should_mask = TRUE THEN
+                  mask_block ( block )
+                END
+              END
+            END
+          INVARIANT
+            cont = bool ( block_to_treat /= {} ) &
+      block_to_treat <: t_block &
+      treated_block <: t_block &
+      block_to_treat /\ treated_block = {} &
+      block_to_treat \/ treated_block = t_block &
+      mb <: t_block &
+      mb = mb$0 \/ ( ( ( cfg_b2bd_up \/ cfg_b2bd_down ) ~ [ obd ] - tdla ) /\ treated_block )
+          VARIANT
+            card ( block_to_treat )
+          END
+        END ;
+
+        release_blocks = VAR cont IN
+          cont <-- init_iteration_t_block ;
+          WHILE cont = TRUE DO
+            VAR block , is_released , should_release IN
+              cont , block <-- iterate_t_block ;
+              is_released <-- cond_release ( block ) ;
+              IF is_released = FALSE THEN
+                should_release <-- cond_release ( block ) ;
+                IF should_release = TRUE THEN
+                  unocc_block ( block )
+                END
+              END
+            END
+          INVARIANT
+            cont = bool ( block_to_treat /= {} ) &
+      block_to_treat <: t_block &
+      treated_block <: t_block &
+      block_to_treat /\ treated_block = {} &
+      block_to_treat \/ treated_block = t_block &
+      ob <: t_block &
+      ob = ob$0 - (
+        ( ( ( t_block - tdla ) \/ cc_init ) /\ ( cfg_b2ed_up \/ cfg_b2ed_down ) ~ [ oed_prev - oed ] )
+        /\ treated_block
+      )
+          VARIANT
+            card ( block_to_treat )
+          END
+        END ;
+        /* TO COMPLETE */
+
+        occupy_blocks = VAR l_cont IN
+                l_cont <-- init_iteration_t_block ;
+                WHILE l_cont = TRUE DO
+                        VAR l_block , l_occ , l_put IN
+                                l_cont , l_block <-- iterate_t_block ;
+                                l_occ <-- read_ob ( l_block ) ;
+                                IF l_occ = FALSE THEN
+                                        l_put <-- cond_occupy ( l_block ) ;
+                                        IF l_put = TRUE THEN
+                                                occ_block ( l_block )
+                                        END
+                                END
+                        END
+                INVARIANT
+                        l_cont = bool ( block_to_treat /= {} ) &
+                        block_to_treat <: t_block &
+                        treated_block <: t_block &
+                        block_to_treat /\ treated_block = {} &
+                        block_to_treat \/ treated_block = t_block &
+                        ob <: t_block &
+                        ob = ob$0 \/ ( ( ( cfg_b2bd_up \/ cfg_b2bd_down ) ~ [ obd ] \/ otd ) /\ treated_block )
+                VARIANT
+                        card ( block_to_treat )
+                END
+        END
+
+END

@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Proof_Obligations xmlns="https://www.atelierb.eu/Formats/pog" version="1.0">
+    <Define name="B definitions" hash="7128875304803749033">
+        <Exp_Comparison op="=">
+            <Id value="NAT" typref="0"/>
+            <Binary_Exp op=".." typref="0">
+                <Integer_Literal value="0" typref="1"/>
+                <Id value="MAXINT" typref="1"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op="=">
+            <Id value="INT" typref="0"/>
+            <Binary_Exp op=".." typref="0">
+                <Id value="MININT" typref="1"/>
+                <Id value="MAXINT" typref="1"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+    </Define>
+    <Define name="ctx" hash="12404769733046189341">
+        <Set>
+            <Id value="t_block_i" typref="0"/>
+        </Set>
+        <Set>
+            <Id value="t_border_i" typref="0"/>
+        </Set>
+        <Set>
+            <Id value="t_exit_i" typref="0"/>
+        </Set>
+        <Exp_Comparison op="&lt;:">
+            <Id value="t_block" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:1:1"/>
+            <Id value="t_block_i" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:1:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="c_block_undet" typref="1" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:2:1"/>
+            <Id value="t_block_i" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:2:2"/>
+        </Exp_Comparison>
+        <Unary_Pred op="not">
+            <Exp_Comparison op=":">
+                <Id value="c_block_undet" typref="1" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:3:1"/>
+                <Id value="t_block" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:3:2"/>
+            </Exp_Comparison>
+        </Unary_Pred>
+        <Exp_Comparison op="&lt;:">
+            <Id value="t_border" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:4:1"/>
+            <Id value="t_border_i" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:4:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="c_border_undet" typref="1" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:5:1"/>
+            <Id value="t_border_i" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:5:2"/>
+        </Exp_Comparison>
+        <Unary_Pred op="not">
+            <Exp_Comparison op=":">
+                <Id value="c_border_undet" typref="1" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:6:1"/>
+                <Id value="t_border" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:6:2"/>
+            </Exp_Comparison>
+        </Unary_Pred>
+        <Exp_Comparison op="&lt;:">
+            <Id value="t_exit" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:7:1"/>
+            <Id value="t_exit_i" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:7:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="c_exit_undet" typref="1" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:8:1"/>
+            <Id value="t_exit_i" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:8:2"/>
+        </Exp_Comparison>
+        <Unary_Pred op="not">
+            <Exp_Comparison op=":">
+                <Id value="c_exit_undet" typref="1" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:9:1"/>
+                <Id value="t_exit" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:9:2"/>
+            </Exp_Comparison>
+        </Unary_Pred>
+        <Exp_Comparison op=":">
+            <Id value="cfg_b2b_up" typref="2" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:10:1"/>
+            <Binary_Exp op="+-&gt;" typref="3">
+                <Id value="t_block" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:10:2:1"/>
+                <Id value="t_block" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:10:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="cfg_b2b_down" typref="2" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:11:1"/>
+            <Binary_Exp op="+-&gt;" typref="3">
+                <Id value="t_block" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:11:2:1"/>
+                <Id value="t_block" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:11:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="cfg_b2bd_up" typref="2" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:12:1"/>
+            <Binary_Exp op="+-&gt;" typref="3">
+                <Id value="t_block" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:12:2:1"/>
+                <Id value="t_border" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:12:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="cfg_b2bd_down" typref="2" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:13:1"/>
+            <Binary_Exp op="+-&gt;" typref="3">
+                <Id value="t_block" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:13:2:1"/>
+                <Id value="t_border" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:13:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="cfg_b2ed_up" typref="2" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:14:1"/>
+            <Binary_Exp op="+-&gt;" typref="3">
+                <Id value="t_block" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:14:2:1"/>
+                <Id value="t_exit" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:14:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="cfg_b2ed_down" typref="2" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:15:1"/>
+            <Binary_Exp op="+-&gt;" typref="3">
+                <Id value="t_block" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:15:2:1"/>
+                <Id value="t_exit" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:15:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="bijection_t_block" typref="2" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:16:1"/>
+            <Binary_Exp op="+-&gt;" typref="3">
+                <Id value="NAT" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:16:2:1"/>
+                <Id value="t_block_i" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:16:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="bijection_t_block" typref="2" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:17:1"/>
+            <Unary_Exp op="perm" typref="3">
+                <Id value="t_block" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:17:2:1"/>
+            </Unary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op="=">
+            <Unary_Exp op="card" typref="1">
+                <Id value="t_block" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:18:1:1"/>
+            </Unary_Exp>
+            <Unary_Exp op="size" typref="1">
+                <Id value="bijection_t_block" typref="2" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:18:2:1"/>
+            </Unary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op="&lt;=i">
+            <Unary_Exp op="card" typref="1">
+                <Id value="t_block" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:19:1:1"/>
+            </Unary_Exp>
+            <Id value="MAXINT" typref="1" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//configuration.bxml:1:4:1:19:2"/>
+        </Exp_Comparison>
+    </Define>
+    <Define name="seext" hash="17933779541101753707">
+        <Exp_Comparison op="&lt;:">
+            <Id value="otd" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//inputs.bxml:1:3:1:1:1"/>
+            <Id value="t_block" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//inputs.bxml:1:3:1:1:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op="&lt;:">
+            <Id value="obd" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//inputs.bxml:1:3:1:2:1"/>
+            <Id value="t_border" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//inputs.bxml:1:3:1:2:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op="&lt;:">
+            <Id value="oed" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//inputs.bxml:1:3:1:3:1"/>
+            <Id value="t_exit" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//inputs.bxml:1:3:1:3:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op="&lt;:">
+            <Id value="oed_prev" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//inputs.bxml:1:3:1:4:1"/>
+            <Id value="t_exit" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//inputs.bxml:1:3:1:4:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op="&lt;:">
+            <Id value="cc_init" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//inputs.bxml:1:3:1:5:1"/>
+            <Id value="t_block" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//inputs.bxml:1:3:1:5:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="cc_tdl_ack" typref="4" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//inputs.bxml:1:3:1:6:1"/>
+            <Id value="BOOL" typref="5" tag="/home/bigodel/uni/metodos/hackathon/block/bdp//inputs.bxml:1:3:1:6:2"/>
+        </Exp_Comparison>
+    </Define>
+    <Define name="lprp" hash="0"/>
+    <Define name="inprp" hash="0"/>
+    <Define name="inext" hash="0"/>
+    <Define name="inv" hash="17956492369377052882">
+        <Exp_Comparison op="&lt;:">
+            <Id value="ob" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:3:1:1:1"/>
+            <Id value="t_block" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:3:1:1:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op="&lt;:">
+            <Id value="tdla" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:3:1:2:1"/>
+            <Id value="t_block" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:3:1:2:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op="&lt;:">
+            <Id value="mb" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:3:1:3:1"/>
+            <Id value="t_block" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:3:1:3:2"/>
+        </Exp_Comparison>
+    </Define>
+    <Define name="ass" hash="0"/>
+    <Define name="cst" hash="0"/>
+    <Define name="sets" hash="0"/>
+    <Proof_Obligation goalHash="10467952025382930747">
+        <Tag>Operation_unmask_block</Tag>
+        <Definition name="B definitions"/>
+        <Definition name="ctx"/>
+        <Definition name="cst"/>
+        <Definition name="lprp"/>
+        <Definition name="inprp"/>
+        <Definition name="inext"/>
+        <Definition name="seext"/>
+        <Definition name="inv"/>
+        <Definition name="ass"/>
+        <Hypothesis>
+            <Exp_Comparison op=":">
+                <Id value="p_block" typref="1" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:5:2:2:1:1:1"/>
+                <Id value="t_block_i" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:5:2:2:1:1:2"/>
+            </Exp_Comparison>
+        </Hypothesis>
+        <Hypothesis>
+            <Exp_Comparison op=":">
+                <Id value="p_block" typref="1" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:5:2:2:1:2:1"/>
+                <Id value="t_block" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:5:2:2:1:2:2"/>
+            </Exp_Comparison>
+        </Hypothesis>
+        <Simple_Goal>
+            <Tag>Invariant is preserved</Tag>
+            <Goal>
+                <Exp_Comparison op="&lt;:">
+                    <Binary_Exp op="-s" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:3:1:3:1">
+                        <Id value="mb" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:5:2:3:1:2:1:1"/>
+                        <Nary_Exp op="{" typref="0">
+                            <Id value="p_block" typref="1" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:5:2:3:1:2:1:2:1"/>
+                        </Nary_Exp>
+                    </Binary_Exp>
+                    <Id value="t_block" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:3:1:3:2"/>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
+    </Proof_Obligation>
+    <Proof_Obligation goalHash="17641764797987693368">
+        <Tag>Operation_mask_block</Tag>
+        <Definition name="B definitions"/>
+        <Definition name="ctx"/>
+        <Definition name="cst"/>
+        <Definition name="lprp"/>
+        <Definition name="inprp"/>
+        <Definition name="inext"/>
+        <Definition name="seext"/>
+        <Definition name="inv"/>
+        <Definition name="ass"/>
+        <Hypothesis>
+            <Exp_Comparison op=":">
+                <Id value="p_block" typref="1" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:5:3:2:1:1:1"/>
+                <Id value="t_block_i" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:5:3:2:1:1:2"/>
+            </Exp_Comparison>
+        </Hypothesis>
+        <Hypothesis>
+            <Exp_Comparison op=":">
+                <Id value="p_block" typref="1" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:5:3:2:1:2:1"/>
+                <Id value="t_block" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:5:3:2:1:2:2"/>
+            </Exp_Comparison>
+        </Hypothesis>
+        <Simple_Goal>
+            <Tag>Invariant is preserved</Tag>
+            <Goal>
+                <Exp_Comparison op="&lt;:">
+                    <Binary_Exp op="\/" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:3:1:3:1">
+                        <Id value="mb" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:5:3:3:1:2:1:1"/>
+                        <Nary_Exp op="{" typref="0">
+                            <Id value="p_block" typref="1" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:5:3:3:1:2:1:2:1"/>
+                        </Nary_Exp>
+                    </Binary_Exp>
+                    <Id value="t_block" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:3:1:3:2"/>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
+    </Proof_Obligation>
+    <Proof_Obligation goalHash="8037154009683876330">
+        <Tag>Operation_alarm_block</Tag>
+        <Definition name="B definitions"/>
+        <Definition name="ctx"/>
+        <Definition name="cst"/>
+        <Definition name="lprp"/>
+        <Definition name="inprp"/>
+        <Definition name="inext"/>
+        <Definition name="seext"/>
+        <Definition name="inv"/>
+        <Definition name="ass"/>
+        <Hypothesis>
+            <Exp_Comparison op=":">
+                <Id value="p_block" typref="1" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:5:5:2:1:1:1"/>
+                <Id value="t_block_i" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:5:5:2:1:1:2"/>
+            </Exp_Comparison>
+        </Hypothesis>
+        <Hypothesis>
+            <Exp_Comparison op=":">
+                <Id value="p_block" typref="1" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:5:5:2:1:2:1"/>
+                <Id value="t_block" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:5:5:2:1:2:2"/>
+            </Exp_Comparison>
+        </Hypothesis>
+        <Simple_Goal>
+            <Tag>Invariant is preserved</Tag>
+            <Goal>
+                <Exp_Comparison op="&lt;:">
+                    <Binary_Exp op="\/" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:3:1:2:1">
+                        <Id value="tdla" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:5:5:3:1:2:1:1"/>
+                        <Nary_Exp op="{" typref="0">
+                            <Id value="p_block" typref="1" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:5:5:3:1:2:1:2:1"/>
+                        </Nary_Exp>
+                    </Binary_Exp>
+                    <Id value="t_block" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:3:1:2:2"/>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
+    </Proof_Obligation>
+    <Proof_Obligation goalHash="9025411597293866343">
+        <Tag>Operation_unalarm_block</Tag>
+        <Definition name="B definitions"/>
+        <Definition name="ctx"/>
+        <Definition name="cst"/>
+        <Definition name="lprp"/>
+        <Definition name="inprp"/>
+        <Definition name="inext"/>
+        <Definition name="seext"/>
+        <Definition name="inv"/>
+        <Definition name="ass"/>
+        <Hypothesis>
+            <Exp_Comparison op=":">
+                <Id value="p_block" typref="1" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:5:6:2:1:1:1"/>
+                <Id value="t_block_i" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:5:6:2:1:1:2"/>
+            </Exp_Comparison>
+        </Hypothesis>
+        <Hypothesis>
+            <Exp_Comparison op=":">
+                <Id value="p_block" typref="1" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:5:6:2:1:2:1"/>
+                <Id value="t_block" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:5:6:2:1:2:2"/>
+            </Exp_Comparison>
+        </Hypothesis>
+        <Simple_Goal>
+            <Tag>Invariant is preserved</Tag>
+            <Goal>
+                <Exp_Comparison op="&lt;:">
+                    <Binary_Exp op="-s" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:3:1:2:1">
+                        <Id value="tdla" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:5:6:3:1:2:1:1"/>
+                        <Nary_Exp op="{" typref="0">
+                            <Id value="p_block" typref="1" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:5:6:3:1:2:1:2:1"/>
+                        </Nary_Exp>
+                    </Binary_Exp>
+                    <Id value="t_block" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:3:1:2:2"/>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
+    </Proof_Obligation>
+    <Proof_Obligation goalHash="10870271218412896780">
+        <Tag>Operation_occ_block</Tag>
+        <Definition name="B definitions"/>
+        <Definition name="ctx"/>
+        <Definition name="cst"/>
+        <Definition name="lprp"/>
+        <Definition name="inprp"/>
+        <Definition name="inext"/>
+        <Definition name="seext"/>
+        <Definition name="inv"/>
+        <Definition name="ass"/>
+        <Hypothesis>
+            <Exp_Comparison op=":">
+                <Id value="p_block" typref="1" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:5:9:2:1:1:1"/>
+                <Id value="t_block_i" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:5:9:2:1:1:2"/>
+            </Exp_Comparison>
+        </Hypothesis>
+        <Hypothesis>
+            <Exp_Comparison op=":">
+                <Id value="p_block" typref="1" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:5:9:2:1:2:1"/>
+                <Id value="t_block" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:5:9:2:1:2:2"/>
+            </Exp_Comparison>
+        </Hypothesis>
+        <Simple_Goal>
+            <Tag>Invariant is preserved</Tag>
+            <Goal>
+                <Exp_Comparison op="&lt;:">
+                    <Binary_Exp op="\/" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:3:1:1:1">
+                        <Id value="ob" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:5:9:3:1:2:1:1"/>
+                        <Nary_Exp op="{" typref="0">
+                            <Id value="p_block" typref="1" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:5:9:3:1:2:1:2:1"/>
+                        </Nary_Exp>
+                    </Binary_Exp>
+                    <Id value="t_block" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:3:1:1:2"/>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
+    </Proof_Obligation>
+    <Proof_Obligation goalHash="14691203902421697093">
+        <Tag>Operation_unocc_block</Tag>
+        <Definition name="B definitions"/>
+        <Definition name="ctx"/>
+        <Definition name="cst"/>
+        <Definition name="lprp"/>
+        <Definition name="inprp"/>
+        <Definition name="inext"/>
+        <Definition name="seext"/>
+        <Definition name="inv"/>
+        <Definition name="ass"/>
+        <Hypothesis>
+            <Exp_Comparison op=":">
+                <Id value="p_block" typref="1" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:5:10:2:1:1:1"/>
+                <Id value="t_block_i" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:5:10:2:1:1:2"/>
+            </Exp_Comparison>
+        </Hypothesis>
+        <Hypothesis>
+            <Exp_Comparison op=":">
+                <Id value="p_block" typref="1" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:5:10:2:1:2:1"/>
+                <Id value="t_block" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:5:10:2:1:2:2"/>
+            </Exp_Comparison>
+        </Hypothesis>
+        <Simple_Goal>
+            <Tag>Invariant is preserved</Tag>
+            <Goal>
+                <Exp_Comparison op="&lt;:">
+                    <Binary_Exp op="-s" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:3:1:1:1">
+                        <Id value="ob" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:5:10:3:1:2:1:1"/>
+                        <Nary_Exp op="{" typref="0">
+                            <Id value="p_block" typref="1" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:5:10:3:1:2:1:2:1"/>
+                        </Nary_Exp>
+                    </Binary_Exp>
+                    <Id value="t_block" typref="0" tag="/home/bigodel/uni/metodos/hackathon/block/bdp/block_services.bxml:1:3:1:1:2"/>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
+    </Proof_Obligation>
+    <TypeInfos>
+        <Type id="0">
+            <Unary_Exp op="POW">
+                <Id value="INTEGER"/>
+            </Unary_Exp>
+        </Type>
+        <Type id="1">
+            <Id value="INTEGER"/>
+        </Type>
+        <Type id="2">
+            <Unary_Exp op="POW">
+                <Binary_Exp op="*">
+                    <Id value="INTEGER"/>
+                    <Id value="INTEGER"/>
+                </Binary_Exp>
+            </Unary_Exp>
+        </Type>
+        <Type id="3">
+            <Unary_Exp op="POW">
+                <Unary_Exp op="POW">
+                    <Binary_Exp op="*">
+                        <Id value="INTEGER"/>
+                        <Id value="INTEGER"/>
+                    </Binary_Exp>
+                </Unary_Exp>
+            </Unary_Exp>
+        </Type>
+        <Type id="4">
+            <Id value="BOOL"/>
+        </Type>
+        <Type id="5">
+            <Unary_Exp op="POW">
+                <Id value="BOOL"/>
+            </Unary_Exp>
+        </Type>
+    </TypeInfos>
+</Proof_Obligations>

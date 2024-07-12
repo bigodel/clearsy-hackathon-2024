@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Proof_Obligations xmlns="https://www.atelierb.eu/Formats/pog" version="1.0">
+    <Define name="B definitions" hash="7128875304803749033">
+        <Exp_Comparison op="=">
+            <Id value="NAT" typref="0"/>
+            <Binary_Exp op=".." typref="0">
+                <Integer_Literal value="0" typref="1"/>
+                <Id value="MAXINT" typref="1"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op="=">
+            <Id value="INT" typref="0"/>
+            <Binary_Exp op=".." typref="0">
+                <Id value="MININT" typref="1"/>
+                <Id value="MAXINT" typref="1"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+    </Define>
+    <Define name="ctx" hash="7034367138803571336">
+        <Exp_Comparison op=":">
+            <Id value="First" typref="1" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp//Iter_base.bxml:1:3:1:1:1"/>
+            <Id value="NAT" typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp//Iter_base.bxml:1:3:1:1:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="Last" typref="1" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp//Iter_base.bxml:1:3:1:2:1"/>
+            <Id value="NAT" typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp//Iter_base.bxml:1:3:1:2:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op="&lt;=i">
+            <Id value="First" typref="1" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp//Iter_base.bxml:1:3:1:3:1"/>
+            <Id value="Last" typref="1" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp//Iter_base.bxml:1:3:1:3:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op="&lt;i">
+            <Id value="Last" typref="1" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp//Iter_base.bxml:1:3:1:4:1"/>
+            <Id value="MAXINT" typref="1" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp//Iter_base.bxml:1:3:1:4:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op="=">
+            <Id value="Trains" typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp//Iter_base.bxml:1:3:1:5:1"/>
+            <Binary_Exp op=".." typref="0">
+                <Id value="First" typref="1" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp//Iter_base.bxml:1:3:1:5:2:1"/>
+                <Id value="Last" typref="1" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp//Iter_base.bxml:1:3:1:5:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="is_MP85" typref="2" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp//Iter_base.bxml:1:3:1:6:1"/>
+            <Binary_Exp op="--&gt;" typref="3">
+                <Id value="Trains" typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp//Iter_base.bxml:1:3:1:6:2:1"/>
+                <Id value="BOOL" typref="4" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp//Iter_base.bxml:1:3:1:6:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+    </Define>
+    <Define name="seext" hash="0"/>
+    <Define name="lprp" hash="0"/>
+    <Define name="inprp" hash="0"/>
+    <Define name="inext" hash="0"/>
+    <Define name="inv" hash="9997614138823548308">
+        <Exp_Comparison op="&lt;:">
+            <Id value="Todo" typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:3:1:1:1"/>
+            <Id value="Trains" typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:3:1:1:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op="&lt;:">
+            <Id value="Done" typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:3:1:2:1"/>
+            <Id value="Trains" typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:3:1:2:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op="=">
+            <Binary_Exp op="\/" typref="0">
+                <Id value="Todo" typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:3:1:3:1:1"/>
+                <Id value="Done" typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:3:1:3:1:2"/>
+            </Binary_Exp>
+            <Id value="Trains" typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:3:1:3:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op="=">
+            <Binary_Exp op="/\" typref="0">
+                <Id value="Todo" typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:3:1:4:1:1"/>
+                <Id value="Done" typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:3:1:4:1:2"/>
+            </Binary_Exp>
+            <EmptySet typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:3:1:4:2"/>
+        </Exp_Comparison>
+    </Define>
+    <Define name="ass" hash="0"/>
+    <Define name="cst" hash="0"/>
+    <Define name="sets" hash="0"/>
+    <Proof_Obligation goalHash="6519263484629708964">
+        <Tag>Initialisation</Tag>
+        <Definition name="B definitions"/>
+        <Definition name="ctx"/>
+        <Definition name="cst"/>
+        <Definition name="lprp"/>
+        <Definition name="inprp"/>
+        <Definition name="inext"/>
+        <Definition name="seext"/>
+        <Simple_Goal>
+            <Tag>Invariant is preserved</Tag>
+            <Goal>
+                <Exp_Comparison op="=">
+                    <Binary_Exp op="\/" typref="0">
+                        <Id value="Trains" typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:3:1:3:1:1,/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:4:1:1:2:1"/>
+                        <EmptySet typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:3:1:3:1:2,/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:4:1:2:2:1"/>
+                    </Binary_Exp>
+                    <Id value="Trains" typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:3:1:3:2"/>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
+        <Simple_Goal>
+            <Tag>Invariant is preserved</Tag>
+            <Goal>
+                <Exp_Comparison op="=">
+                    <Binary_Exp op="/\" typref="0">
+                        <Id value="Trains" typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:3:1:4:1:1,/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:4:1:1:2:1"/>
+                        <EmptySet typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:3:1:4:1:2,/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:4:1:2:2:1"/>
+                    </Binary_Exp>
+                    <EmptySet typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:3:1:4:2"/>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
+    </Proof_Obligation>
+    <Proof_Obligation goalHash="16304542920376263509">
+        <Tag>Operation_init_iter</Tag>
+        <Definition name="B definitions"/>
+        <Definition name="ctx"/>
+        <Definition name="cst"/>
+        <Definition name="lprp"/>
+        <Definition name="inprp"/>
+        <Definition name="inext"/>
+        <Definition name="seext"/>
+        <Definition name="inv"/>
+        <Definition name="ass"/>
+        <Simple_Goal>
+            <Tag>Invariant is preserved</Tag>
+            <Goal>
+                <Exp_Comparison op="=">
+                    <Binary_Exp op="\/" typref="0">
+                        <Id value="Trains" typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:3:1:3:1:1,/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:5:1:2:1:1:2:1"/>
+                        <EmptySet typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:3:1:3:1:2,/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:5:1:2:1:2:2:1"/>
+                    </Binary_Exp>
+                    <Id value="Trains" typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:3:1:3:2"/>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
+        <Simple_Goal>
+            <Tag>Invariant is preserved</Tag>
+            <Goal>
+                <Exp_Comparison op="=">
+                    <Binary_Exp op="/\" typref="0">
+                        <Id value="Trains" typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:3:1:4:1:1,/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:5:1:2:1:1:2:1"/>
+                        <EmptySet typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:3:1:4:1:2,/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:5:1:2:1:2:2:1"/>
+                    </Binary_Exp>
+                    <EmptySet typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:3:1:4:2"/>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
+    </Proof_Obligation>
+    <Proof_Obligation goalHash="9101000044353240447">
+        <Tag>Operation_next_iter</Tag>
+        <Definition name="B definitions"/>
+        <Definition name="ctx"/>
+        <Definition name="cst"/>
+        <Definition name="lprp"/>
+        <Definition name="inprp"/>
+        <Definition name="inext"/>
+        <Definition name="seext"/>
+        <Definition name="inv"/>
+        <Definition name="ass"/>
+        <Hypothesis>
+            <Unary_Pred op="not">
+                <Exp_Comparison op="=">
+                    <Id value="Todo" typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:5:2:2:1:1"/>
+                    <EmptySet typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:5:2:2:1:2"/>
+                </Exp_Comparison>
+            </Unary_Pred>
+        </Hypothesis>
+        <Local_Hyp num="1">
+            <Exp_Comparison op=":">
+                <Id value="chosen" typref="1" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:5:2:3:1:2:1:1:1"/>
+                <Id value="NAT" typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:5:2:3:1:2:1:1:2"/>
+            </Exp_Comparison>
+        </Local_Hyp>
+        <Local_Hyp num="2">
+            <Exp_Comparison op=":">
+                <Id value="chosen" typref="1" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:5:2:3:1:2:1:2:1"/>
+                <Id value="Todo" typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:5:2:3:1:2:1:2:2"/>
+            </Exp_Comparison>
+        </Local_Hyp>
+        <Local_Hyp num="3">
+            <Exp_Comparison op="=">
+                <Id value="new_Todo" typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:5:2:3:1:2:1:3:1"/>
+                <Binary_Exp op="-s" typref="0">
+                    <Id value="Todo" typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:5:2:3:1:2:1:3:2:1"/>
+                    <Nary_Exp op="{" typref="0">
+                        <Id value="chosen" typref="1" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:5:2:3:1:2:1:3:2:2:1"/>
+                    </Nary_Exp>
+                </Binary_Exp>
+            </Exp_Comparison>
+        </Local_Hyp>
+        <Simple_Goal>
+            <Tag>Invariant is preserved</Tag>
+            <Ref_Hyp num="1"/>
+            <Ref_Hyp num="2"/>
+            <Ref_Hyp num="3"/>
+            <Goal>
+                <Exp_Comparison op="&lt;:">
+                    <Id value="new_Todo" typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:3:1:1:1,/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:5:2:3:1:3:1:1:2:1"/>
+                    <Id value="Trains" typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:3:1:1:2"/>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
+        <Simple_Goal>
+            <Tag>Invariant is preserved</Tag>
+            <Ref_Hyp num="1"/>
+            <Ref_Hyp num="2"/>
+            <Ref_Hyp num="3"/>
+            <Goal>
+                <Exp_Comparison op="&lt;:">
+                    <Binary_Exp op="\/" typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:3:1:2:1">
+                        <Id value="Done" typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:5:2:3:1:3:1:2:2:1:1"/>
+                        <Nary_Exp op="{" typref="0">
+                            <Id value="chosen" typref="1" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:5:2:3:1:3:1:2:2:1:2:1"/>
+                        </Nary_Exp>
+                    </Binary_Exp>
+                    <Id value="Trains" typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:3:1:2:2"/>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
+        <Simple_Goal>
+            <Tag>Invariant is preserved</Tag>
+            <Ref_Hyp num="1"/>
+            <Ref_Hyp num="2"/>
+            <Ref_Hyp num="3"/>
+            <Goal>
+                <Exp_Comparison op="=">
+                    <Binary_Exp op="\/" typref="0">
+                        <Id value="new_Todo" typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:3:1:3:1:1,/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:5:2:3:1:3:1:1:2:1"/>
+                        <Binary_Exp op="\/" typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:3:1:3:1:2">
+                            <Id value="Done" typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:5:2:3:1:3:1:2:2:1:1"/>
+                            <Nary_Exp op="{" typref="0">
+                                <Id value="chosen" typref="1" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:5:2:3:1:3:1:2:2:1:2:1"/>
+                            </Nary_Exp>
+                        </Binary_Exp>
+                    </Binary_Exp>
+                    <Id value="Trains" typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:3:1:3:2"/>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
+        <Simple_Goal>
+            <Tag>Invariant is preserved</Tag>
+            <Ref_Hyp num="1"/>
+            <Ref_Hyp num="2"/>
+            <Ref_Hyp num="3"/>
+            <Goal>
+                <Exp_Comparison op="=">
+                    <Binary_Exp op="/\" typref="0">
+                        <Id value="new_Todo" typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:3:1:4:1:1,/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:5:2:3:1:3:1:1:2:1"/>
+                        <Binary_Exp op="\/" typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:3:1:4:1:2">
+                            <Id value="Done" typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:5:2:3:1:3:1:2:2:1:1"/>
+                            <Nary_Exp op="{" typref="0">
+                                <Id value="chosen" typref="1" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:5:2:3:1:3:1:2:2:1:2:1"/>
+                            </Nary_Exp>
+                        </Binary_Exp>
+                    </Binary_Exp>
+                    <EmptySet typref="0" tag="/home/bigodel/uni/metodos/hackathon/iterator/bdp/Iter_services.bxml:1:3:1:4:2"/>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
+    </Proof_Obligation>
+    <TypeInfos>
+        <Type id="0">
+            <Unary_Exp op="POW">
+                <Id value="INTEGER"/>
+            </Unary_Exp>
+        </Type>
+        <Type id="1">
+            <Id value="INTEGER"/>
+        </Type>
+        <Type id="2">
+            <Unary_Exp op="POW">
+                <Binary_Exp op="*">
+                    <Id value="INTEGER"/>
+                    <Id value="BOOL"/>
+                </Binary_Exp>
+            </Unary_Exp>
+        </Type>
+        <Type id="3">
+            <Unary_Exp op="POW">
+                <Unary_Exp op="POW">
+                    <Binary_Exp op="*">
+                        <Id value="INTEGER"/>
+                        <Id value="BOOL"/>
+                    </Binary_Exp>
+                </Unary_Exp>
+            </Unary_Exp>
+        </Type>
+        <Type id="4">
+            <Unary_Exp op="POW">
+                <Id value="BOOL"/>
+            </Unary_Exp>
+        </Type>
+    </TypeInfos>
+</Proof_Obligations>
